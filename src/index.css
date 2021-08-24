@@ -368,6 +368,16 @@ html {
 /* :root */
 .dark {
   /* colors */
+  --primary: #d49bc7;
+  --secondary: #8f3d7c;
+  --pageBackground: rgb(10, 10, 10);
+  --sectionBackground: #181818;
+  --mainShadow: 14px 14px 20px black, -14px -14px 20px #131314;
+  /* --btnShadow: 1.5px 1.5px 1px 0px #ecf0f3 inset,
+    -1.5px -1.5px 1px 0px #181818 inset; */
+  --btnShadow: 10px 10px 16px black, -10px -10px 16px #131314;
+  --btnShadowClicked: 1.75px 1.75px 1.5px 0px #181818 inset,
+    -1.75px -1.75px 1.5px 0px #cecece inset;
   --primary-100: #e2e0ff;
   --primary-200: #c1beff;
   --primary-300: #a29dff;
@@ -444,82 +454,17 @@ html {
 
 .light {
   /* colors */
-  --primary-100: #e2e0ff;
-  --primary-200: #c1beff;
-  --primary-300: #a29dff;
-  --primary-400: #837dff;
-  /* --primary-500: #645cff; */
-  --primary-500: #504acc;
-  --primary-700: #3c3799;
-  --primary-800: #282566;
-  --primary-900: #141233;
-  /* grey */
-  --grey-50: #f8fafc;
-  --grey-100: #f1f5f9;
-  --grey-200: #e2e8f0;
-  --grey-300: #cbd5e1;
-  --grey-400: #94a3b8;
-  --grey-500: #64748b;
-  --grey-600: #475569;
-  --grey-700: #334155;
-  --grey-800: #1e293b;
-  --grey-900: #0f172a;
-  /* rest of the colors */
-  --black: #fff;
-  --white: rgb(0, 0, 0);
-  --red-light: #f8d7da;
-  --red-dark: #842029;
-  --green-light: #d1e7dd;
-  --green-dark: #0f5132;
-  /* fonts  */
-  /* --headingFont: "Roboto", sans-serif;
-  --bodyFont: "Nunito", sans-serif;
-  --retro: "Press Start 2P", cursive;
-  --bodyRetro: "VT323", monospace;
-  --smallText: 0.7em; */
-  /* rest of the vars */
-  --background-title: var(--black);
-  --backgroundColor: var(--grey-50);
-  --textColor: var(--grey-900);
-  --borderRadius: 0.25rem;
-  --letterSpacing: 1px;
-  --transition: 0.3s ease-in-out all;
-  --max-width: 1120px;
-  --fixed-width: 600px;
-  --body-color: #99ffff;
-  --desktop-icon: #00becc;
-  --back-desktop: #00d1e0;
-  --back-image: linear-gradient(to right, #484357ba, #422b4ecc),
-    url("https://art.pixilart.com/b45f6c4989491f9.gif");
-  --back-image-right: linear-gradient(to right, #0b8101ba, #14f300ba),
-    url("https://art.pixilart.com/b45f6c4989491f9.gif");
-  --back-image-wrong: linear-gradient(to right, #910013ba, #fa0707cc),
-    url("https://art.pixilart.com/b45f6c4989491f9.gif");
-  --window-color: linear-gradient(90deg, #d400ff 0%, #ff8fff 80%);
-  --topinfo-background: #585191;
-  --score-background: #d68589;
-  --timer-background: #585191;
-  --title-color: #aa00aa;
-  --dark-low: #ff47ff;
-  --dark-high: #8f008f;
-  --left-radius: 7.5px;
-  --right-radius: 7.5px;
-  --full-radius: 7.5px;
-  /* box shadow*/
-  --shadow-1: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
-  --shadow-2: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
-    0 2px 4px -1px rgba(0, 0, 0, 0.06);
-  --shadow-3: 0 10px 15px -3px rgba(0, 0, 0, 0.1),
-    0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  --shadow-4: 0 20px 25px -5px rgba(0, 0, 0, 0.1),
-    0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  --shadow-title: 2.5px 2.5px 2.5px rgb(85, 85, 85) inset,
-    2.5px 2.5px 2.5px rgb(85, 85, 85) inset;
-  --shadow-container: 1px 1px 0px 1px var(--black),
-    0.65px 0.65px 0px 0.65px var(--white) inset;
+  --primary: #3cb9e2;
+  --secondary: #10546a;
+  --pageBackground: #fff;
+  --sectionBackground: #ecf0f3;
+  --mainShadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
+  --btnShadow: 10px 10px 16px #cbced1, -10px -10px 16px white;
+  --btnShadowClicked: 1.75px 1.75px 1.5px 0px #181818 inset,
+    -1.75px -1.75px 1.5px 0px #cecece inset;
 }
 
-.App {
+/* .App {
   text-align: center;
 }
 
@@ -532,10 +477,11 @@ html {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
-.App-header {
-  background-color: white;
+.application {
+  text-align: center;
+  background-color: var(--pageBackground);
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -545,7 +491,7 @@ html {
   color: black;
 }
 
-.App-link {
+/* .App-link {
   color: #61dafb;
 }
 
@@ -556,13 +502,13 @@ html {
   to {
     transform: rotate(360deg);
   }
-}
+} */
 
 .section {
-  width: 75%;
-  background: #ecf0f3;
-  box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white;
-  color: rgb(60, 185, 226);
+  width: 65%;
+  background: var(--sectionBackground);
+  box-shadow: var(--mainShadow);
+  color: var(--primary);
   font-family: "Roboto", sans-serif;
   margin-top: 20px;
   margin-bottom: 20px;
@@ -574,9 +520,15 @@ a {
   text-decoration: none;
 }
 
+a:hover {
+  color: #187ea0;
+  transform: scale(1.2);
+  transition: 1s;
+}
+
 a:link,
 a:visited {
-  color: rgb(60, 185, 226);
+  color: var(--primary);
 }
 
 ul {
@@ -584,18 +536,68 @@ ul {
   padding: 0;
 }
 
+.icon:hover {
+  transform: scale(1.2);
+  transition: 1s;
+}
+
+/*------------------*/
+/*---- LANGUAGES ---*/
+/*------------------*/
+
+.languages {
+  width: 45%;
+  height: 7vh;
+  background: var(--sectionBackground);
+  box-shadow: var(--mainShadow);
+  color: var(--primary);
+  font-family: "Roboto", sans-serif;
+  /* margin-top: 10px; */
+  margin-bottom: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  /* min-height: 70vh; */
+}
+
+.nav-top {
+  margin-top: 5px;
+}
+
+.btn-top,
+.btn-top-theme {
+  color: var(--sectionBackground);
+  background: var(--primary);
+  width: 4rem;
+  height: 1.75rem;
+  font-size: 14px;
+  /* margin-bottom: -30px; */
+  padding: 1px;
+  cursor: pointer;
+  border-radius: 20px;
+  border: transparent;
+  box-shadow: var(--btnShadow);
+}
+
+.btn-top-theme:hover {
+  color: var(--sectionBackground);
+  background: var(--secondary);
+  box-shadow: var(--btnShadowClicked);
+}
+
+.btn-clicked {
+  color: var(--sectionBackground);
+  background: var(--secondary);
+  box-shadow: var(--btnShadowClicked);
+}
+
 /*------------------*/
 /*----- NAVBAR -----*/
 /*------------------*/
 
-.navbar {
-  margin-top: 25px;
-  min-height: 10vh;
-}
-
 nav {
   width: 100%;
   text-align: center;
+  font-family: "Roboto", sans-serif;
 }
 
 ul {
@@ -607,28 +609,101 @@ li {
   display: inline;
 }
 
+.breaker {
+  width: 100%;
+  height: 4px;
+  background: var(--pageBackground);
+}
+
 /*------------------*/
 /*----- HEADER -----*/
 /*------------------*/
 
+.top-section {
+  min-height: 50vh;
+}
+
+.header {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: 1fr 2fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  min-height: 50vh;
+}
+
+.image-container {
+  grid-area: 1 / 1 / 3 / 2;
+}
+
 .photo {
   display: block;
-  width: 100px;
-  height: 100px;
+  width: 270px;
+  height: 300px;
   object-fit: cover;
-  margin: 20px auto 10px auto;
+  margin-top: 60px;
+  border-bottom-left-radius: 20px;
+  /* filter: sepia(7); */
+  /* margin: 20px auto 10px auto; */
   /* width: 100%;
   height: 100px;
   object-fit: contain; */
 }
 
 .main-title {
+  grid-area: 1 / 2 / 2 / 3;
   font-family: "Press Start 2P", cursive;
-  font-size: 3.5vw;
-  width: 30vw;
+  font-size: 3.75vw;
+  width: 32vw;
   height: 12vh;
   padding: 15px;
   margin: auto;
   border-radius: 20px;
-  box-shadow: 7px 7px 10px #cbced1, -7px -7px 10px white;
+  box-shadow: var(--mainShadow);
+  color: var(--sectionBackground);
+  background: var(--primary);
+  /* transition: 0.5s; */
+}
+
+.main-title:hover {
+  color: var(--primary);
+  background: var(--sectionBackground);
+  /* transition: 0.5s; */
+}
+
+.header-text {
+  grid-area: 2 / 2 / 3 / 3;
+  /* padding: 10px 100px; */
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 1.25rem;
+}
+
+/*------- MEDIA QUERIES------ */
+@media screen and (max-width: 900px) {
+  .main-title {
+    font-size: 3.1vw;
+    width: 29vw;
+    height: 10vh;
+  }
+  .header-text {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .main-title {
+    font-size: 2.9vw;
+    width: 27vw;
+    height: 9vh;
+  }
+  .header-text {
+    font-size: 1rem;
+    padding-left: 7.5px;
+    padding-right: 7.5px;
+  }
+  .btn-top {
+    width: 4rem;
+    font-size: 12px;
+  }
 }
