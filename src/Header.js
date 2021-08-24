@@ -1,18 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import { useGlobalContext } from "./context";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import clauhaus from "./images/clauhaus.png";
+import clau from "./images/clau.png";
 import { faBolt } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
   const { language } = useGlobalContext();
+  const [image, setImage] = useState(clauhaus);
+
+  const changeImage = () => {
+    if (image === clauhaus) {
+      setImage(clau);
+    } else {
+      setImage(clauhaus);
+    }
+  };
+
   return (
     <section className="section top-section">
       <nav>
         {language === "english" && (
           <ul>
-            <li className="icon">
-              <FontAwesomeIcon icon={faBolt} />
+            <li>
+              <button className="bolt" onClick={() => changeImage()}>
+                <FontAwesomeIcon icon={faBolt} />
+              </button>
             </li>
             <a href="#about">
               <li>About Me</li>
@@ -28,7 +41,9 @@ const Header = () => {
         {language === "spanish" && (
           <ul>
             <li>
-              <FontAwesomeIcon icon={faBolt} />
+              <button className="bolt" onClick={() => changeImage()}>
+                <FontAwesomeIcon icon={faBolt} />
+              </button>
             </li>
             <a href="#about">
               <li>Acerca de mí</li>
@@ -44,7 +59,9 @@ const Header = () => {
         {language === "german" && (
           <ul>
             <li>
-              <FontAwesomeIcon icon={faBolt} />
+              <button className="bolt" onClick={() => changeImage()}>
+                <FontAwesomeIcon icon={faBolt} />
+              </button>
             </li>
             <a href="#about">
               <li>Über mich</li>
@@ -61,7 +78,7 @@ const Header = () => {
       <div className="breaker"></div>
       <section className=" header">
         <div className="image-container">
-          <img src={clauhaus} alt="Claudio Aime" className="photo" />
+          <img src={image} alt="Claudio Aime" className="photo" />
         </div>
         <h1 className="main-title">ClauHaus</h1>
         {language === "english" && (
