@@ -6,7 +6,7 @@ const Dashboard = () => {
   return (
     <section>
       <div className="title-container">
-        <div className="dashboard-title">ClauHaus</div>
+        <div className="dashboard-title">ClauHaus32</div>
         <button className="bolt-dashboard">
           <FontAwesomeIcon icon={faBolt} />
         </button>
