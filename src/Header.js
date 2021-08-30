@@ -1,34 +1,16 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGlobalContext } from "./context";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import clauhaus from "./images/clauhaus.png";
-import clau from "./images/clau.png";
-import { faBolt } from "@fortawesome/free-solid-svg-icons";
 
 const Header = () => {
-  const { language } = useGlobalContext();
-  const [image, setImage] = useState(clauhaus);
-
-  const changeImage = () => {
-    if (image === clauhaus) {
-      setImage(clau);
-    } else {
-      setImage(clauhaus);
-    }
-  };
+  const { language, image } = useGlobalContext();
 
   return (
     <section className="section top-section">
       <nav>
         {language === "english" && (
           <ul>
-            <li>
-              <button className="bolt" onClick={() => changeImage()}>
-                <FontAwesomeIcon icon={faBolt} />
-              </button>
-            </li>
             <a href="#about">
-              <li>About Me</li>
+              <li>About </li>
             </a>
             <a href="#projects">
               <li>Projects</li>
@@ -40,11 +22,6 @@ const Header = () => {
         )}
         {language === "spanish" && (
           <ul>
-            <li>
-              <button className="bolt" onClick={() => changeImage()}>
-                <FontAwesomeIcon icon={faBolt} />
-              </button>
-            </li>
             <a href="#about">
               <li>Acerca de mí</li>
             </a>
@@ -58,11 +35,6 @@ const Header = () => {
         )}
         {language === "german" && (
           <ul>
-            <li>
-              <button className="bolt" onClick={() => changeImage()}>
-                <FontAwesomeIcon icon={faBolt} />
-              </button>
-            </li>
             <a href="#about">
               <li>Über mich</li>
             </a>
@@ -80,28 +52,27 @@ const Header = () => {
         <div className="image-container">
           <img src={image} alt="Claudio Aime" className="photo" />
         </div>
-        <h1 className="main-title">ClauHaus</h1>
+        <h1 className="main-title">Claudio Aime</h1>
         {language === "english" && (
           <p className="header-text">
-            My name is Claudio Aime and I'm a self taught Front End Development
-            student.<br></br> I speak spanish, english and i'm studying german.
-            Love learning new stuff, cats, 8 Bits, foosball and The Beatles.
+            Hi and welcome! I'm Claudio also known as ClauHaus, self taught
+            Front End Development student.
+            <br></br> If you have a moment to spare let me show you a little bit
+            of what i do.
           </p>
         )}
         {language === "spanish" && (
           <p className="header-text">
-            Mi nombre es Claudio Aime y soy un estudiante autodidacta de
-            Desarollo Front End.<br></br> Hablo español, inglés y estoy
-            estudiando alemán. Me encanta aprender cosas nuevas, gatos, 8 Bits,
-            el metegol y The Beatles.
+            Hola y bienvenidx! Soy Claudio también conocido como ClauHaus,
+            estudiante autodidacta de Desarollo Front End.<br></br> Si tenes un
+            momento, déjame mostrarte un poco de lo que hago.
           </p>
         )}
         {language === "german" && (
           <p className="header-text">
-            Mein Name ist Claudio Aime und ich bin ein Autodidakt Front End
-            Development Student .<br></br> Ich spreche Spanisch, Englisch und
-            ich lerne Deutsch. Ich lerne gerne neue Sachen, Katzen, 8 Bits,
-            Tischfussball und The Beatles .
+            Grüezi und willkommen! Mein Name ist Claudio, Autodidakt Front End
+            Development Student .<br></br> Wenn du einen Moment Zeit haben,
+            lässt du mich ein wenig von dem zeigen, was ich mache.
           </p>
         )}
       </section>

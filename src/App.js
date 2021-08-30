@@ -1,4 +1,3 @@
-import logo from "./logo.svg";
 import "./App.css";
 import { useGlobalContext } from "./context";
 import Bolt from "./Bolt";
@@ -7,13 +6,15 @@ import Header from "./Header";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Dashboard from "./Dashboard";
+import Main from "./Main";
 
 function App() {
   const { intro, website } = useGlobalContext();
   return (
     <section className="application">
       {intro && <Bolt />}
-      {website && (
+      {/* {website && (
         <>
           <Languages />
           <Header />
@@ -21,17 +22,13 @@ function App() {
           <Projects />
           <Contact />
         </>
+      )} */}
+      {website && (
+        <>
+          <Dashboard />
+          <Main />
+        </>
       )}
-    </section>
-  );
-  return (
-    <section className="application">
-      <Bolt />
-      <Languages />
-      <Header />
-      <About />
-      <Projects />
-      <Contact />
     </section>
   );
 }

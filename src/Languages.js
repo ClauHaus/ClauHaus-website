@@ -1,10 +1,26 @@
 import React, { useState, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faMoon, faSun } from "@fortawesome/free-solid-svg-icons";
+import {
+  faMoon,
+  faSun,
+  faBolt,
+  faVolumeUp,
+} from "@fortawesome/free-solid-svg-icons";
+import clauhaus from "./images/clauhaus.png";
+import clau from "./images/clau.png";
 import { useGlobalContext } from "./context";
 
 const Languages = () => {
-  const { language, setLanguage, theme, setTheme } = useGlobalContext();
+  const { language, setLanguage, theme, setTheme, image, setImage } =
+    useGlobalContext();
+
+  const changeImage = () => {
+    if (image === clauhaus) {
+      setImage(clau);
+    } else {
+      setImage(clauhaus);
+    }
+  };
 
   const [spanish, setSpanish] = useState("");
   const [english, setEnglish] = useState("");
@@ -65,6 +81,11 @@ const Languages = () => {
             </button>
           </li>
           <li>
+            <button className="bolt" onClick={() => changeImage()}>
+              <FontAwesomeIcon icon={faBolt} />
+            </button>
+          </li>
+          <li>
             {theme === "light" && (
               <button
                 className="btn-top-theme"
@@ -81,6 +102,11 @@ const Languages = () => {
                 <FontAwesomeIcon icon={faMoon} />
               </button>
             )}
+          </li>
+          <li>
+            <button className="btn-top-theme">
+              <FontAwesomeIcon icon={faVolumeUp} />
+            </button>
           </li>
         </ul>
       )}
@@ -114,6 +140,11 @@ const Languages = () => {
             </button>
           </li>
           <li>
+            <button className="bolt" onClick={() => changeImage()}>
+              <FontAwesomeIcon icon={faBolt} />
+            </button>
+          </li>
+          <li>
             {theme === "light" && (
               <button
                 className="btn-top-theme"
@@ -130,6 +161,11 @@ const Languages = () => {
                 <FontAwesomeIcon icon={faMoon} />
               </button>
             )}
+          </li>
+          <li>
+            <button className="btn-top-theme">
+              <FontAwesomeIcon icon={faVolumeUp} />
+            </button>
           </li>
         </ul>
       )}
@@ -163,6 +199,11 @@ const Languages = () => {
             </button>
           </li>
           <li>
+            <button className="bolt" onClick={() => changeImage()}>
+              <FontAwesomeIcon icon={faBolt} />
+            </button>
+          </li>
+          <li>
             {theme === "light" && (
               <button
                 className="btn-top-theme"
@@ -179,6 +220,11 @@ const Languages = () => {
                 <FontAwesomeIcon icon={faMoon} />
               </button>
             )}
+          </li>
+          <li>
+            <button className="btn-top-theme">
+              <FontAwesomeIcon icon={faVolumeUp} />
+            </button>
           </li>
         </ul>
       )}
