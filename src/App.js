@@ -8,6 +8,7 @@ import Projects from "./Projects";
 import Contact from "./Contact";
 import Dashboard from "./Dashboard";
 import Main from "./Main";
+import Sidebar from "./Sidebar";
 
 function App() {
   const { intro, website } = useGlobalContext();
@@ -27,6 +28,7 @@ function App() {
         <>
           <Dashboard />
           <Main />
+          <Sidebar />
         </>
       )}
     </section>
