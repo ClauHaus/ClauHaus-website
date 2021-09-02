@@ -1107,3 +1107,12 @@ li {
   font-family: var(--retroBig);
   color: var(--sectionBackground);
 }
+
+@media screen and (max-width: 430px) {
+  .bolt-intro {
+    font-size: 10rem;
+  }
+  .main {
+    width: 100%;
+  }
+}
