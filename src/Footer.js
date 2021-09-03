@@ -1,7 +1,10 @@
 import React from "react";
 
 const Footer = () => {
-  return <section className="footer">Powered by ClauHaus</section>;
+  const actualYear = new Date().getFullYear();
+  return (
+    <section className="footer">Powered by ClauHaus © {actualYear}</section>
+  );
 };
 
 export default Footer;
