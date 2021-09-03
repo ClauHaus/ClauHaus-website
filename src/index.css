@@ -788,6 +788,8 @@ li {
   color: var(--sectionBackground);
   background: var(--primary);
   /* transition: 0.5s; */
+  width: 50%;
+  height: 50vh;
   margin: auto;
 }
 
@@ -1123,9 +1125,4 @@ li {
   .main {
     width: 100%;
   }
-}
-
-.prueba {
-  width: 50%;
-  margin: auto;
 }
