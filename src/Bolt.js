@@ -15,10 +15,11 @@ const Bolt = () => {
         onMouseLeave={() => setTitle("Claudio")}
       >
         {title}
+        <button className="bolt-intro" onClick={() => startWeb()}>
+          <FontAwesomeIcon icon={faBolt} />
+        </button>
       </div>
-      <button className="bolt-intro" onClick={() => startWeb()}>
-        <FontAwesomeIcon icon={faBolt} />
-      </button>
+
       {/* </section> */}
     </>
   );

@@ -775,6 +775,8 @@ li {
 }
 
 .intro-title {
+  display: flex;
+  flex-direction: column;
   font-family: var(--retroBig);
   font-size: 3.75vw;
   /* width: 32vw;
