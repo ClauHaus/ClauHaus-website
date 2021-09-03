@@ -802,7 +802,7 @@ li {
   border-style: none;
   cursor: pointer;
   /* -webkit-animation: pulsate-bck 1s ease-in-out infinite both; */
-  /* animation: pulsate-bck 1.5s ease-in-out infinite both; */
+  animation: pulsate-bck 1.5s ease-in-out infinite both;
 }
 
 /* @-webkit-keyframes pulsate-bck {
@@ -1117,4 +1117,13 @@ li {
 .section-title {
   font-family: var(--retroBig);
   color: var(--sectionBackground);
+}
+
+@media screen and (max-width: 430px) {
+  .intro-title {
+    font-size: 6vw;
+  }
+  .bolt-intro {
+    font-size: 40vw;
+  }
 }
