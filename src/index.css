@@ -791,7 +791,7 @@ li {
   border-style: none;
   cursor: pointer;
   /* -webkit-animation: pulsate-bck 1s ease-in-out infinite both; */
-  animation: pulsate-bck 1.5s ease-in-out infinite both;
+  /* animation: pulsate-bck 1.5s ease-in-out infinite both; */
 }
 
 /* @-webkit-keyframes pulsate-bck {
