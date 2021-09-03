@@ -769,10 +769,10 @@ li {
 
 /*--------------------INTRO----------------------------*/
 
-.intro {
+/* .intro {
   max-width: 100%;
   min-width: 100%;
-}
+} */
 
 .intro-title {
   display: flex;
