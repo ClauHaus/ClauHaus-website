@@ -1123,4 +1123,7 @@ li {
   .intro-title {
     font-size: 6vw;
   }
+  .main {
+    width: 100%;
+  }
 }
