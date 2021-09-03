@@ -8,7 +8,6 @@ const Bolt = () => {
   const { startWeb } = useGlobalContext();
   return (
     <>
-      {/* <section className="intro"> */}
       <div
         className="intro-title"
         onMouseEnter={() => setTitle("ClauHaus")}
@@ -19,8 +18,6 @@ const Bolt = () => {
           <FontAwesomeIcon icon={faBolt} />
         </button>
       </div>
-
-      {/* </section> */}
     </>
   );
 };

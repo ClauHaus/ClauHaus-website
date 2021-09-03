@@ -1122,6 +1122,19 @@ li {
   color: var(--sectionBackground);
 }
 
+/*-----------------------FOOTER------------------*/
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background: var(--sectionBackground);
+  color: var(--primary);
+  font-family: var(--retroSmall);
+}
+
+/*-----------------------MEDIA QUERIES------------------*/
+
 @media screen and (max-width: 430px) {
   .intro-title {
     font-size: 6vw;
