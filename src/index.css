@@ -778,6 +778,8 @@ li {
 .intro-title {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   font-family: var(--retroBig);
   font-size: 3.75vw;
   /* width: 32vw;
@@ -794,9 +796,10 @@ li {
 }
 
 .bolt-intro {
+  /* display: flex; */
   font-size: 20vw;
-  width: 50%;
-  margin: 10px auto 0px auto;
+  /* width: 50%; */
+  /* margin: 10px auto 0px auto; */
   color: yellow;
   background: var(--pageBackground);
   border-style: none;
