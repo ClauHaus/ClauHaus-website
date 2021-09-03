@@ -794,7 +794,8 @@ li {
 }
 
 .bolt-intro {
-  font-size: 15rem;
+  font-size: 20vw;
+  width: 50%;
   margin: auto;
   color: yellow;
   background: var(--pageBackground);
@@ -1116,13 +1117,4 @@ li {
 .section-title {
   font-family: var(--retroBig);
   color: var(--sectionBackground);
-}
-
-@media screen and (max-width: 430px) {
-  .bolt-intro {
-    font-size: 10rem;
-  }
-  .main {
-    width: 100%;
-  }
 }
