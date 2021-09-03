@@ -59,34 +59,101 @@ const Sidebar = () => {
           </button>
         </div>
       </div>
+
       <ul className="sidebar-options">
-        <li>
-          <button
-            className={`sidebar-btn-top ${english}`}
-            value="english"
-            onClick={(e) => setLanguage(e.target.value)}
-          >
-            English
-          </button>
-        </li>
-        <li>
-          <button
-            className={`sidebar-btn-top ${spanish}`}
-            value="spanish"
-            onClick={(e) => setLanguage(e.target.value)}
-          >
-            Spanish
-          </button>
-        </li>
-        <li>
-          <button
-            className={`sidebar-btn-top ${german}`}
-            value="german"
-            onClick={(e) => setLanguage(e.target.value)}
-          >
-            German
-          </button>
-        </li>
+        {language === "english" && (
+          <>
+            <li>
+              <button
+                className={`sidebar-btn-top ${english}`}
+                value="english"
+                onClick={(e) => setLanguage(e.target.value)}
+              >
+                English
+              </button>
+            </li>
+            <li>
+              <button
+                className={`sidebar-btn-top ${spanish}`}
+                value="spanish"
+                onClick={(e) => setLanguage(e.target.value)}
+              >
+                Spanish
+              </button>
+            </li>
+            <li>
+              <button
+                className={`sidebar-btn-top ${german}`}
+                value="german"
+                onClick={(e) => setLanguage(e.target.value)}
+              >
+                German
+              </button>
+            </li>
+          </>
+        )}
+        {language === "spanish" && (
+          <>
+            <li>
+              <button
+                className={`sidebar-btn-top ${english}`}
+                value="english"
+                onClick={(e) => setLanguage(e.target.value)}
+              >
+                Inglés
+              </button>
+            </li>
+            <li>
+              <button
+                className={`sidebar-btn-top ${spanish}`}
+                value="spanish"
+                onClick={(e) => setLanguage(e.target.value)}
+              >
+                Español
+              </button>
+            </li>
+            <li>
+              <button
+                className={`sidebar-btn-top ${german}`}
+                value="german"
+                onClick={(e) => setLanguage(e.target.value)}
+              >
+                Alemán
+              </button>
+            </li>
+          </>
+        )}
+        {language === "german" && (
+          <>
+            <li>
+              <button
+                className={`sidebar-btn-top ${english}`}
+                value="english"
+                onClick={(e) => setLanguage(e.target.value)}
+              >
+                Englisch
+              </button>
+            </li>
+            <li>
+              <button
+                className={`sidebar-btn-top ${spanish}`}
+                value="spanish"
+                onClick={(e) => setLanguage(e.target.value)}
+              >
+                Spanisch
+              </button>
+            </li>
+            <li>
+              <button
+                className={`sidebar-btn-top ${german}`}
+                value="german"
+                onClick={(e) => setLanguage(e.target.value)}
+              >
+                Deutsch
+              </button>
+            </li>
+          </>
+        )}
         <li>
           {theme === "light" && (
             <button
