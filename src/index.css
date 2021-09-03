@@ -1124,3 +1124,8 @@ li {
     width: 100%;
   }
 }
+
+.prueba {
+  width: 50%;
+  margin: auto;
+}

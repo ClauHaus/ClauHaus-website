@@ -9,7 +9,7 @@ const Bolt = () => {
   return (
     <>
       {/* <section className="intro"> */}
-      <div
+      {/* <div
         className="intro-title"
         onMouseEnter={() => setTitle("ClauHaus")}
         onMouseLeave={() => setTitle("Claudio")}
@@ -18,8 +18,10 @@ const Bolt = () => {
         <button className="bolt-intro" onClick={() => startWeb()}>
           <FontAwesomeIcon icon={faBolt} />
         </button>
-      </div>
-
+      </div> */}
+      <button className="prueba" onClick={() => startWeb()}>
+        click
+      </button>
       {/* </section> */}
     </>
   );
