@@ -796,7 +796,7 @@ li {
 .bolt-intro {
   font-size: 20vw;
   width: 50%;
-  margin: auto;
+  margin: 10px auto 0px auto;
   color: yellow;
   background: var(--pageBackground);
   border-style: none;
