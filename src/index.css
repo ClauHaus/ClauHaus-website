@@ -778,7 +778,7 @@ li {
 .intro-title {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
   font-family: var(--retroBig);
   font-size: 3.75vw;
@@ -1131,5 +1131,11 @@ li {
   }
   .main {
     width: 100%;
+    margin: 10px auto;
+  }
+  .title-container {
+    justify-content: space-between;
+    margin-left: 35px;
+    margin-right: 35px;
   }
 }
