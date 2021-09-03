@@ -433,7 +433,7 @@ html {
   flex-direction: column;
   /* align-items: center;
   justify-content: center; */
-  font-size: calc(10px + 2vmin);
+  /* font-size: calc(10px + 2vmin); */
   color: black;
 }
 
@@ -510,15 +510,15 @@ ul {
   transition: 1s;
 } */
 
-.bolt-intro {
+/* .bolt-intro {
   font-size: 15rem;
   color: yellow;
   background: var(--pageBackground);
   border-style: none;
   cursor: pointer;
-  /* -webkit-animation: pulsate-bck 1s ease-in-out infinite both; */
-  /* animation: pulsate-bck 1.5s ease-in-out infinite both; */
-}
+  -webkit-animation: pulsate-bck 1s ease-in-out infinite both;
+  animation: pulsate-bck 1.5s ease-in-out infinite both;
+} */
 
 /* @-webkit-keyframes pulsate-bck {
   0% {
@@ -769,6 +769,11 @@ li {
 
 /*--------------------INTRO----------------------------*/
 
+.intro {
+  max-width: 100%;
+  min-width: 100%;
+}
+
 .intro-title {
   font-family: var(--retroBig);
   font-size: 3.75vw;
@@ -780,12 +785,12 @@ li {
   color: var(--sectionBackground);
   background: var(--primary);
   /* transition: 0.5s; */
-  margin: auto auto auto auto;
+  margin: auto;
 }
 
 .bolt-intro {
   font-size: 15rem;
-  margin: -100px auto auto auto;
+  margin: auto;
   color: yellow;
   background: var(--pageBackground);
   border-style: none;

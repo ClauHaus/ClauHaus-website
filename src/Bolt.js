@@ -8,6 +8,7 @@ const Bolt = () => {
   const { startWeb } = useGlobalContext();
   return (
     <>
+      {/* <section className="intro"> */}
       <div
         className="intro-title"
         onMouseEnter={() => setTitle("ClauHaus")}
@@ -18,6 +19,7 @@ const Bolt = () => {
       <button className="bolt-intro" onClick={() => startWeb()}>
         <FontAwesomeIcon icon={faBolt} />
       </button>
+      {/* </section> */}
     </>
   );
 };
