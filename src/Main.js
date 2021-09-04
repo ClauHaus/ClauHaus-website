@@ -9,12 +9,19 @@ import {
   faVolumeUp,
   faVolumeMute,
 } from "@fortawesome/free-solid-svg-icons";
+import About from "./About";
 
 const Main = () => {
-  const { language } = useGlobalContext();
+  const { language, about, setAbout } = useGlobalContext();
+  // const [aboutTitle, setAboutTitle] = useState("About me");
   return (
     <section className="main">
-      <div className="section-title about">
+      <div
+        className="section-title about"
+        onClick={() => setAbout(true)}
+        // onMouseEnter={() => setAboutTitle("ClauHaus")}
+        // onMouseEnter={() => setTitle("ClauHaus")}
+      >
         {language === "english" && <h3>About me</h3>}
         {language === "spanish" && <h3>Acerca de mí</h3>}
         {language === "german" && <h3>Über mich</h3>}

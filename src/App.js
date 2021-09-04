@@ -12,7 +12,7 @@ import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 
 function App() {
-  const { intro, website } = useGlobalContext();
+  const { intro, website, about } = useGlobalContext();
   return (
     <section className="application">
       {intro && <Bolt />}
@@ -29,6 +29,7 @@ function App() {
         <>
           <Dashboard />
           <Main />
+          {about && <About />}
           <Sidebar />
           <Footer />
         </>

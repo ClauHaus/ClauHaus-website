@@ -7,6 +7,7 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [intro, setIntro] = useState(true);
   const [website, setWebsite] = useState(false);
+  const [about, setAbout] = useState(false);
   const [sideBar, setSideBarOpen] = useState("");
   const [image, setImage] = useState(clauhaus);
 
@@ -36,11 +37,13 @@ const AppProvider = ({ children }) => {
         language,
         image,
         sideBar,
+        about,
         setLanguage,
         setTheme,
         startWeb,
         setImage,
         setSideBarOpen,
+        setAbout,
       }}
     >
       {children}
