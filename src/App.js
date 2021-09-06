@@ -29,8 +29,10 @@ function App() {
       )} */}
       {website && (
         <>
-          <Dashboard />
-          <Main />
+          <section className="introduction">
+            <Dashboard />
+            <Main />
+          </section>
           {about && <About />}
           {projects && <Projects />}
           {contact && <Contact />}
