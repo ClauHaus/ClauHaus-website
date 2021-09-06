@@ -1075,6 +1075,28 @@ li {
   justify-items: center;
 }
 
+article.activeSlide {
+  opacity: 1;
+  display: block;
+  transform: translateX(0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transition: var(--transition);
+}
+article.lastSlide {
+  transform: translateY(-200%);
+  display: none;
+  opacity: 0;
+}
+article.nextSlide {
+  transform: translateX(-200%);
+  display: none;
+  opacity: 0;
+}
+
 /*-----------------------ABOUT------------------*/
 
 .about {
@@ -1087,7 +1109,7 @@ li {
   height: 30vh;
   background: var(--sectionBackground);
   /* box-shadow: var(--mainShadow); */
-  font-family: "Roboto", sans-serif;
+  font-family: var(--retroSmall);
   border-radius: 20px;
   cursor: pointer;
 }
@@ -1103,14 +1125,43 @@ li {
   background: var(--sectionBackground);
   box-shadow: var(--mainShadow);
   color: var(--primary);
-  font-family: "Roboto", sans-serif;
+  font-family: var(--retroSmall);
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
   border-radius: 20px;
-  min-height: 80vh;
+  min-height: 50vh;
   position: absolute;
   top: 15vh;
-  left: 20vw;
+  left: 10vw;
+  z-index: 0;
+}
+
+.header-about {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+}
+
+.header-subtitle {
+  font-size: 4vw;
+}
+
+.btn-close-about {
+  position: absolute;
+  font-size: 2vw;
+  right: 20px;
+  background: var(--primary);
+  color: var(--sectionBackground);
+  border: transparent;
+}
+
+.about-text {
+  font-size: 1.375rem;
+  text-align: center;
+  padding-left: 50px;
+  padding-right: 50px;
 }
 
 /*-----------------------PROJECTS------------------*/
@@ -1121,11 +1172,37 @@ li {
   justify-content: center;
   grid-area: projects;
   background: var(--sectionBackground);
+  font-family: var(--retroSmall);
   /* border: 5px solid green; */
   width: 90%;
   height: 40vh;
   border-radius: 20px;
+  cursor: pointer;
 }
+
+.projects:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.section-projects {
+  width: 60%;
+  background: var(--sectionBackground);
+  box-shadow: var(--mainShadow);
+  color: var(--primary);
+  font-family: var(--retroSmall);
+  /* margin-top: 20px; */
+  /* margin-bottom: 20px; */
+  border-radius: 20px;
+  min-height: 70vh;
+  position: absolute;
+  top: 25vh;
+  left: 15vw;
+}
+
+/*-----------------------CONTACT------------------*/
+
 .contact {
   display: flex;
   align-items: center;
@@ -1137,7 +1214,30 @@ li {
   height: 25vh;
   border-radius: 20px;
 }
-.connect {
+
+.contact:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.section-contact {
+  width: 60%;
+  background: var(--sectionBackground);
+  box-shadow: var(--mainShadow);
+  color: var(--primary);
+  font-family: var(--retroSmall);
+  /* margin-top: 20px; */
+  /* margin-bottom: 20px; */
+  border-radius: 20px;
+  min-height: 60vh;
+  position: absolute;
+  top: 35vh;
+  left: 20vw;
+}
+
+/*-----------------------CONNECTION------------------*/
+.connection {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -1147,6 +1247,27 @@ li {
   width: 85%;
   height: 15vh;
   border-radius: 20px;
+}
+
+.connection:hover {
+  opacity: 0.8;
+  transform: scale(1.2);
+  transition: 0.5s;
+}
+
+.section-connection {
+  width: 60%;
+  background: var(--sectionBackground);
+  box-shadow: var(--mainShadow);
+  color: var(--primary);
+  font-family: var(--retroSmall);
+  /* margin-top: 20px; */
+  /* margin-bottom: 20px; */
+  border-radius: 20px;
+  min-height: 40vh;
+  position: absolute;
+  top: 45vh;
+  left: 25vw;
 }
 
 .section-title {

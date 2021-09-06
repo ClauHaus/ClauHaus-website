@@ -6,13 +6,15 @@ import Header from "./Header";
 import About from "./About";
 import Projects from "./Projects";
 import Contact from "./Contact";
+import Connection from "./Connection";
 import Dashboard from "./Dashboard";
 import Main from "./Main";
 import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 
 function App() {
-  const { intro, website, about } = useGlobalContext();
+  const { intro, website, about, projects, contact, connection } =
+    useGlobalContext();
   return (
     <section className="application">
       {intro && <Bolt />}
@@ -30,6 +32,9 @@ function App() {
           <Dashboard />
           <Main />
           {about && <About />}
+          {projects && <Projects />}
+          {contact && <Contact />}
+          {connection && <Connection />}
           <Sidebar />
           <Footer />
         </>

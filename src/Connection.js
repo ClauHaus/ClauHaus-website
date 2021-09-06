@@ -10,17 +10,17 @@ import {
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 
-const Contact = () => {
-  const { language, setContact } = useGlobalContext();
+const Connection = () => {
+  const { language, setConnection } = useGlobalContext();
   return (
     <>
       {language === "english" && (
-        <section id="contact" className="section-contact">
+        <section id="connection" className="section-connection">
           <div className="header-about">
-            <h3 className="header-subtitle">Contact</h3>
+            <h3 className="header-subtitle">Connection</h3>
             <button
               className="btn-close-about"
-              onClick={() => setContact(false)}
+              onClick={() => setConnection(false)}
             >
               <FontAwesomeIcon icon={faTimes} />
             </button>
@@ -29,12 +29,12 @@ const Contact = () => {
         </section>
       )}
       {language === "spanish" && (
-        <section id="contact" className="section-contact">
+        <section id="connection" className="section-connection">
           <div className="header-about">
-            <h3 className="header-subtitle">Contacto</h3>
+            <h3 className="header-subtitle">Conexión</h3>
             <button
               className="btn-close-about"
-              onClick={() => setContact(false)}
+              onClick={() => setConnection(false)}
             >
               <FontAwesomeIcon icon={faTimes} />
             </button>
@@ -43,12 +43,12 @@ const Contact = () => {
         </section>
       )}
       {language === "german" && (
-        <section id="contact" className="section-contact">
+        <section id="connection" className="section-connection">
           <div className="header-about">
-            <h3 className="header-subtitle">Kontakt</h3>
+            <h3 className="header-subtitle">Verbindung</h3>
             <button
               className="btn-close-about"
-              onClick={() => setContact(false)}
+              onClick={() => setConnection(false)}
             >
               <FontAwesomeIcon icon={faTimes} />
             </button>
@@ -60,4 +60,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default Connection;

@@ -12,7 +12,8 @@ import {
 import About from "./About";
 
 const Main = () => {
-  const { language, about, setAbout } = useGlobalContext();
+  const { language, about, setAbout, setProjects, setContact, setConnection } =
+    useGlobalContext();
   // const [aboutTitle, setAboutTitle] = useState("About me");
   return (
     <section className="main">
@@ -26,17 +27,20 @@ const Main = () => {
         {language === "spanish" && <h3>Acerca de mí</h3>}
         {language === "german" && <h3>Über mich</h3>}
       </div>
-      <div className="section-title projects">
+      <div className="section-title projects" onClick={() => setProjects(true)}>
         {language === "english" && <h3>Projects</h3>}
         {language === "spanish" && <h3>Proyectos</h3>}
         {language === "german" && <h3>Projekte</h3>}
       </div>
-      <div className="section-title contact">
+      <div className="section-title contact" onClick={() => setContact(true)}>
         {language === "english" && <h3>Contact</h3>}
         {language === "spanish" && <h3>Contacto</h3>}
         {language === "german" && <h3>Kontakt</h3>}
       </div>
-      <div className="section-title connect">
+      <div
+        className="section-title connection"
+        onClick={() => setConnection(true)}
+      >
         {language === "english" && <h3>Connection</h3>}
         {language === "spanish" && <h3>Conexión</h3>}
         {language === "german" && <h3>Verbindung</h3>}

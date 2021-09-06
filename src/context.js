@@ -7,9 +7,12 @@ const AppContext = React.createContext();
 const AppProvider = ({ children }) => {
   const [intro, setIntro] = useState(true);
   const [website, setWebsite] = useState(false);
-  const [about, setAbout] = useState(false);
   const [sideBar, setSideBarOpen] = useState("");
   const [image, setImage] = useState(clauhaus);
+  const [about, setAbout] = useState(false);
+  const [projects, setProjects] = useState(false);
+  const [contact, setContact] = useState(false);
+  const [connection, setConnection] = useState(false);
 
   const selectedLanguage = localStorage.getItem("newLanguage");
   const selectedTheme = localStorage.getItem("newTheme");
@@ -38,12 +41,18 @@ const AppProvider = ({ children }) => {
         image,
         sideBar,
         about,
+        projects,
+        contact,
+        connection,
         setLanguage,
         setTheme,
         startWeb,
         setImage,
         setSideBarOpen,
         setAbout,
+        setProjects,
+        setContact,
+        setConnection,
       }}
     >
       {children}
