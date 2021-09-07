@@ -12,14 +12,22 @@ import {
 import About from "./About";
 
 const Main = () => {
-  const { language, about, setAbout, setProjects, setContact, setConnection } =
-    useGlobalContext();
+  const {
+    language,
+    about,
+    setAbout,
+    setProjects,
+    setContact,
+    setConnection,
+    aboutClass,
+    openAbout,
+  } = useGlobalContext();
   // const [aboutTitle, setAboutTitle] = useState("About me");
   return (
     <section className="main">
       <div
         className="section-title about"
-        onClick={() => setAbout(true)}
+        onClick={() => openAbout()}
         // onMouseEnter={() => setAboutTitle("ClauHaus")}
         // onMouseEnter={() => setTitle("ClauHaus")}
       >

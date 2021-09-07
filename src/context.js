@@ -1,6 +1,4 @@
 import React, { useState, useEffect, useContext } from "react";
-import clauhaus from "./images/clauhaus.png";
-import clau from "./images/clau.png";
 
 const AppContext = React.createContext();
 
@@ -8,8 +6,8 @@ const AppProvider = ({ children }) => {
   const [intro, setIntro] = useState(true);
   const [website, setWebsite] = useState(false);
   const [sideBar, setSideBarOpen] = useState("");
-  const [image, setImage] = useState(clauhaus);
   const [about, setAbout] = useState(false);
+  const [aboutClass, setAboutClass] = useState("");
   const [projects, setProjects] = useState(false);
   const [contact, setContact] = useState(false);
   const [connection, setConnection] = useState(false);
@@ -31,6 +29,16 @@ const AppProvider = ({ children }) => {
     setWebsite(true);
   };
 
+  const openAbout = () => {
+    setAbout(true);
+    setAboutClass("");
+  };
+
+  const closeAbout = () => {
+    // setAbout(false);
+    setAboutClass("closeAbout");
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -38,7 +46,6 @@ const AppProvider = ({ children }) => {
         website,
         theme,
         language,
-        image,
         sideBar,
         about,
         projects,
@@ -47,12 +54,14 @@ const AppProvider = ({ children }) => {
         setLanguage,
         setTheme,
         startWeb,
-        setImage,
         setSideBarOpen,
         setAbout,
         setProjects,
         setContact,
         setConnection,
+        aboutClass,
+        openAbout,
+        closeAbout,
       }}
     >
       {children}

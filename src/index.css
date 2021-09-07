@@ -637,6 +637,18 @@ li {
   background: var(--breaker);
 }
 
+.breaker-down {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  height: 20px;
+  background: var(--pageBackground);
+  background: var(--breaker);
+}
+
 /*------------------*/
 /*----- HEADER -----*/
 /*------------------*/
@@ -706,12 +718,12 @@ li {
 /*---- ABOUT ME ----*/
 /*------------------*/
 
-.about-text {
+/* .about-text {
   font-size: 1.375rem;
   text-align: center;
   padding-left: 50px;
   padding-right: 50px;
-}
+} */
 
 .skills-container-images {
   display: grid;
@@ -1133,7 +1145,23 @@ article.nextSlide {
   position: absolute;
   top: 15vh;
   left: 10vw;
+  /* top: 20vh;
+  left: 21vw; */
   z-index: 0;
+  animation: scale-in-tl 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-tl {
+  0% {
+    transform: scale(0);
+    transform-origin: 0 0;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 0 0;
+    opacity: 1;
+  }
 }
 
 .header-about {
@@ -1159,9 +1187,44 @@ article.nextSlide {
 
 .about-text {
   font-size: 1.375rem;
-  text-align: center;
-  padding-left: 50px;
-  padding-right: 50px;
+  text-align: right;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.about-article {
+  display: flex;
+  flex-direction: row;
+}
+
+.about-image {
+  /* width: 100%; */
+  height: 50vh;
+  padding-bottom: 20px;
+}
+
+.chevron-style {
+  color: var(--sectionBackground);
+  background: transparent;
+  border: transparent;
+  cursor: pointer;
+}
+
+.closeAbout {
+  animation: scale-out-tr 0.3s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+@keyframes scale-out-tr {
+  0% {
+    transform: scale(1);
+    transform-origin: 100% 0;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(0);
+    transform-origin: 100% 0;
+    opacity: 1;
+  }
 }
 
 /*-----------------------PROJECTS------------------*/
@@ -1199,6 +1262,20 @@ article.nextSlide {
   position: absolute;
   top: 25vh;
   left: 15vw;
+  animation: scale-in-tr 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-tr {
+  0% {
+    transform: scale(0);
+    transform-origin: 100% 0;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 100% 0;
+    opacity: 1;
+  }
 }
 
 /*-----------------------CONTACT------------------*/
@@ -1234,6 +1311,20 @@ article.nextSlide {
   position: absolute;
   top: 35vh;
   left: 20vw;
+  animation: scale-in-left 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-left {
+  0% {
+    transform: scale(0);
+    transform-origin: 0 50%;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 0 50%;
+    opacity: 1;
+  }
 }
 
 /*-----------------------CONNECTION------------------*/
@@ -1268,6 +1359,20 @@ article.nextSlide {
   position: absolute;
   top: 45vh;
   left: 25vw;
+  animation: scale-in-right 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+}
+
+@keyframes scale-in-right {
+  0% {
+    transform: scale(0);
+    transform-origin: 100% 50%;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 100% 50%;
+    opacity: 1;
+  }
 }
 
 .section-title {
@@ -1322,7 +1427,7 @@ article.nextSlide {
 }
 
 .introduction {
-  animation: scale-in-center 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
 
 @keyframes scale-in-center {
