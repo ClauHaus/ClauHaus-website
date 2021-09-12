@@ -15,14 +15,20 @@ const AppProvider = ({ children }) => {
   const [connection, setConnection] = useState(false);
   const [closingConnection, setClosingConnection] = useState("");
   const [sectionOpacity, setSectionOpacity] = useState("");
+  const [thunderMove, setThunderMove] = useState("");
+  const [thunderOpacity, setThunderOpacity] = useState("");
 
   const selectedLanguage = localStorage.getItem("newLanguage");
   const selectedTheme = localStorage.getItem("newTheme");
+  const selectedSound = localStorage.getItem("newSound");
 
   const [language, setLanguage] = useState(
     selectedLanguage ? selectedLanguage : "english"
   );
+
   const [theme, setTheme] = useState(selectedTheme ? selectedTheme : "light");
+
+  const [sound, setSound] = useState(selectedSound ? selectedSound : true);
 
   useEffect(() => {
     document.documentElement.className = theme;
@@ -89,6 +95,16 @@ const AppProvider = ({ children }) => {
     }, 500);
   };
 
+  const applyThunder = () => {
+    setThunderMove("thunder-move");
+    setThunderOpacity("thunder-opacity");
+    setTimeout(() => {
+      setThunderMove("");
+      setThunderOpacity("");
+    }, 3000);
+    // return () => clearTimeout(thunderTime);
+  };
+
   return (
     <AppContext.Provider
       value={{
@@ -96,6 +112,7 @@ const AppProvider = ({ children }) => {
         website,
         theme,
         language,
+        sound,
         sideBar,
         about,
         projects,
@@ -106,8 +123,11 @@ const AppProvider = ({ children }) => {
         closingContact,
         closingConnection,
         sectionOpacity,
+        thunderMove,
+        thunderOpacity,
         setLanguage,
         setTheme,
+        setSound,
         startWeb,
         setSideBarOpen,
         setAbout,
@@ -122,6 +142,7 @@ const AppProvider = ({ children }) => {
         closeContact,
         openConnection,
         closeConnection,
+        applyThunder,
       }}
     >
       {children}

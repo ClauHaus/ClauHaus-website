@@ -25,12 +25,13 @@ const Main = () => {
     openContact,
     openConnection,
     sectionOpacity,
+    thunderMove,
   } = useGlobalContext();
   // const [aboutTitle, setAboutTitle] = useState("About me");
   return (
     <section className="main">
       <div
-        className={`section-title about ${sectionOpacity}`}
+        className={`section-title about ${sectionOpacity}${thunderMove}`}
         onClick={() => openAbout()}
         // onMouseEnter={() => setAboutTitle("ClauHaus")}
         // onMouseEnter={() => setTitle("ClauHaus")}
@@ -40,7 +41,7 @@ const Main = () => {
         {language === "german" && <h3>Über mich</h3>}
       </div>
       <div
-        className={`section-title projects ${sectionOpacity}`}
+        className={`section-title projects ${sectionOpacity}${thunderMove}`}
         onClick={() => openProjects()}
       >
         {language === "english" && <h3>Projects</h3>}
@@ -48,7 +49,7 @@ const Main = () => {
         {language === "german" && <h3>Projekte</h3>}
       </div>
       <div
-        className={`section-title contact ${sectionOpacity}`}
+        className={`section-title contact ${sectionOpacity}${thunderMove}`}
         onClick={() => openContact()}
       >
         {language === "english" && <h3>Contact</h3>}
@@ -56,7 +57,7 @@ const Main = () => {
         {language === "german" && <h3>Kontakt</h3>}
       </div>
       <div
-        className={`section-title connection ${sectionOpacity}`}
+        className={`section-title connection ${sectionOpacity}${thunderMove}`}
         onClick={() => openConnection()}
       >
         {language === "english" && <h3>Connect with me</h3>}

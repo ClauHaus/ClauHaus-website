@@ -1,5 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { useGlobalContext } from "./context";
+import useSound from "use-sound";
+import pop from "./sounds/pop.mp3";
+import themeSound from "./sounds/themeSound.mp3";
+import clickLanguages from "./sounds/clickLanguages.mp3";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBolt,
@@ -11,8 +15,19 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 const Sidebar = () => {
-  const { sideBar, setSideBarOpen, language, setLanguage, theme, setTheme } =
-    useGlobalContext();
+  const {
+    sideBar,
+    setSideBarOpen,
+    language,
+    setLanguage,
+    theme,
+    setTheme,
+    sound,
+    setSound,
+    applyThunder,
+    thunderOpacity,
+    thunderMove,
+  } = useGlobalContext();
 
   const [spanish, setSpanish] = useState("");
   const [english, setEnglish] = useState("");
@@ -41,18 +56,42 @@ const Sidebar = () => {
     localStorage.setItem("newTheme", theme);
   }, [language, theme]);
 
+  const [playPop] = useSound(pop, { volume: 0.5 });
+  const [playthemeSound] = useSound(themeSound, { volume: 0.5 });
+  const [playLanguages] = useSound(clickLanguages, { volume: 0.5 });
+
+  const makeSound = () => {
+    setSound(!sound);
+    playPop();
+    localStorage.setItem("newSound", JSON.stringify(!sound));
+  };
+
+  const soundPop = () => {
+    playthemeSound();
+    if (theme === "light") {
+      setTheme("dark");
+    } else {
+      setTheme("light");
+    }
+  };
+
   return (
-    <section className={`sidebar ${sideBar}`}>
+    <section className={`sidebar ${sideBar} ${thunderMove}`}>
       <div className="title-container">
         <div className="title">
-          <h3 className="sidebar-dashboard-title">ClauHaus</h3>
-          <button className="bolt-dashboard">
+          <h3 className={`sidebar-dashboard-title ${thunderOpacity}`}>
+            ClauHaus
+          </h3>
+          <button
+            className={`bolt-dashboard ${thunderOpacity}`}
+            onClick={() => applyThunder()}
+          >
             <FontAwesomeIcon icon={faBolt} />
           </button>
         </div>
         <div className="sidebar-btn-toggle">
           <button
-            className="sidebar-btn-options"
+            className={`sidebar-btn-options ${thunderOpacity}`}
             onClick={() => setSideBarOpen("")}
           >
             <FontAwesomeIcon icon={faTimes} />
@@ -65,27 +104,39 @@ const Sidebar = () => {
           <>
             <li>
               <button
-                className={`sidebar-btn-top ${english}`}
+                className={`sidebar-btn-top ${english} ${thunderMove}`}
                 value="english"
-                onClick={(e) => setLanguage(e.target.value)}
+                onClick={(e) =>
+                  sound
+                    ? (setLanguage(e.target.value), playLanguages())
+                    : setLanguage(e.target.value)
+                }
               >
                 English
               </button>
             </li>
             <li>
               <button
-                className={`sidebar-btn-top ${spanish}`}
+                className={`sidebar-btn-top ${spanish} ${thunderMove}`}
                 value="spanish"
-                onClick={(e) => setLanguage(e.target.value)}
+                onClick={(e) =>
+                  sound
+                    ? (setLanguage(e.target.value), playLanguages())
+                    : setLanguage(e.target.value)
+                }
               >
                 Spanish
               </button>
             </li>
             <li>
               <button
-                className={`sidebar-btn-top ${german}`}
+                className={`sidebar-btn-top ${german}${thunderMove}`}
                 value="german"
-                onClick={(e) => setLanguage(e.target.value)}
+                onClick={(e) =>
+                  sound
+                    ? (setLanguage(e.target.value), playLanguages())
+                    : setLanguage(e.target.value)
+                }
               >
                 German
               </button>
@@ -96,27 +147,39 @@ const Sidebar = () => {
           <>
             <li>
               <button
-                className={`sidebar-btn-top ${english}`}
+                className={`sidebar-btn-top ${english}${thunderMove}`}
                 value="english"
-                onClick={(e) => setLanguage(e.target.value)}
+                onClick={(e) =>
+                  sound
+                    ? (setLanguage(e.target.value), playLanguages())
+                    : setLanguage(e.target.value)
+                }
               >
                 Inglés
               </button>
             </li>
             <li>
               <button
-                className={`sidebar-btn-top ${spanish}`}
+                className={`sidebar-btn-top ${spanish} ${thunderMove}`}
                 value="spanish"
-                onClick={(e) => setLanguage(e.target.value)}
+                onClick={(e) =>
+                  sound
+                    ? (setLanguage(e.target.value), playLanguages())
+                    : setLanguage(e.target.value)
+                }
               >
                 Español
               </button>
             </li>
             <li>
               <button
-                className={`sidebar-btn-top ${german}`}
+                className={`sidebar-btn-top ${german}${thunderMove}`}
                 value="german"
-                onClick={(e) => setLanguage(e.target.value)}
+                onClick={(e) =>
+                  sound
+                    ? (setLanguage(e.target.value), playLanguages())
+                    : setLanguage(e.target.value)
+                }
               >
                 Alemán
               </button>
@@ -127,27 +190,39 @@ const Sidebar = () => {
           <>
             <li>
               <button
-                className={`sidebar-btn-top ${english}`}
+                className={`sidebar-btn-top ${english}${thunderMove}`}
                 value="english"
-                onClick={(e) => setLanguage(e.target.value)}
+                onClick={(e) =>
+                  sound
+                    ? (setLanguage(e.target.value), playLanguages())
+                    : setLanguage(e.target.value)
+                }
               >
                 Englisch
               </button>
             </li>
             <li>
               <button
-                className={`sidebar-btn-top ${spanish}`}
+                className={`sidebar-btn-top ${spanish} ${thunderMove}`}
                 value="spanish"
-                onClick={(e) => setLanguage(e.target.value)}
+                onClick={(e) =>
+                  sound
+                    ? (setLanguage(e.target.value), playLanguages())
+                    : setLanguage(e.target.value)
+                }
               >
                 Spanisch
               </button>
             </li>
             <li>
               <button
-                className={`sidebar-btn-top ${german}`}
+                className={`sidebar-btn-top ${german} ${thunderMove}`}
                 value="german"
-                onClick={(e) => setLanguage(e.target.value)}
+                onClick={(e) =>
+                  sound
+                    ? (setLanguage(e.target.value), playLanguages())
+                    : setLanguage(e.target.value)
+                }
               >
                 Deutsch
               </button>
@@ -157,24 +232,31 @@ const Sidebar = () => {
         <li>
           {theme === "light" && (
             <button
-              className="sidebar-btn-top-theme"
-              onClick={() => setTheme("dark")}
+              className={`sidebar-btn-top-theme ${thunderMove}`}
+              onClick={() => (sound ? soundPop() : setTheme("dark"))}
             >
               <FontAwesomeIcon icon={faSun} />
             </button>
           )}
           {theme === "dark" && (
             <button
-              className="sidebar-btn-top-theme"
-              onClick={() => setTheme("light")}
+              className={`sidebar-btn-top-theme ${thunderMove}`}
+              onClick={() => (sound ? soundPop() : setTheme("light"))}
             >
               <FontAwesomeIcon icon={faMoon} />
             </button>
           )}
         </li>
         <li>
-          <button className="sidebar-btn-top-theme">
-            <FontAwesomeIcon icon={faVolumeUp} />
+          <button
+            className={`sidebar-btn-top-theme ${thunderMove}`}
+            onClick={() => makeSound()}
+          >
+            {sound ? (
+              <FontAwesomeIcon icon={faVolumeUp} />
+            ) : (
+              <FontAwesomeIcon icon={faVolumeMute} />
+            )}
           </button>
         </li>
       </ul>

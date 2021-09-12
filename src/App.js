@@ -13,7 +13,7 @@ import Sidebar from "./Sidebar";
 import Footer from "./Footer";
 
 function App() {
-  const { intro, website, about, projects, contact, connection } =
+  const { intro, website, about, projects, contact, connection, thunderMove } =
     useGlobalContext();
   return (
     <section className="application">
@@ -29,7 +29,7 @@ function App() {
       )} */}
       {website && (
         <>
-          <section className="introduction">
+          <section className={`introduction ${thunderMove}`}>
             <Dashboard />
             <Main />
           </section>
