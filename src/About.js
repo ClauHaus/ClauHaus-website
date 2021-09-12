@@ -16,7 +16,9 @@ import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import { dataAboutEn, dataAboutSp, dataAboutDe } from "./utils/dataAbout";
 
 const About = () => {
-  const { language, setAbout, closeAbout, aboutClass } = useGlobalContext();
+  const { language, setAbout, closeAbout, closeSection, closingAbout } =
+    useGlobalContext();
+
   const [index, setIndex] = useState(0);
 
   const nextPage = () => {
@@ -48,7 +50,7 @@ const About = () => {
 
   return (
     <>
-      <section id="about" className={`section-about ${aboutClass}`}>
+      <section id="about" className={`section-about ${closingAbout}`}>
         <div className="header-about">
           {language === "english" && (
             <h3 className="header-subtitle">About Me</h3>
@@ -59,8 +61,7 @@ const About = () => {
           {language === "german" && (
             <h3 className="header-subtitle">Über mich</h3>
           )}
-
-          <button className="btn-close-about" onClick={() => closeAbout()}>
+          <button className="btn-close-left" onClick={() => closeAbout()}>
             <FontAwesomeIcon icon={faTimes} />
           </button>
         </div>
@@ -68,7 +69,7 @@ const About = () => {
         <section>
           {language === "english" &&
             dataAboutEn.map((item, itemIndex) => {
-              const { id, image, text } = item;
+              const { id, image, text, skills } = item;
               let position = "nextSlide";
               if (itemIndex === index) {
                 position = "activeslide";
@@ -76,7 +77,30 @@ const About = () => {
               return (
                 <article key={id} className={`about-article ${position}`}>
                   <img src={image} alt="Claudio Aime" className="about-image" />
-                  <p className="about-text">{text}</p>
+                  <div className="projects-content">
+                    <p className="about-text">{text}</p>
+                    {skills ? (
+                      <section>
+                        <h2>Skills</h2>
+                        <div className="skills-container-images">
+                          <FontAwesomeIcon icon={faHtml5} />
+                          <FontAwesomeIcon icon={faCss3} />
+                          <FontAwesomeIcon icon={faJs} />
+                          <FontAwesomeIcon icon={faReact} />
+                          <FontAwesomeIcon icon={faMobileAlt} />
+                        </div>
+                        <div className="skills-container-titles">
+                          <h4>HTML5</h4>
+                          <h4>CSS3</h4>
+                          <h4>JavaScript</h4>
+                          <h4>React</h4>
+                          <h4>Responsive</h4>
+                        </div>
+                      </section>
+                    ) : (
+                      <p></p>
+                    )}
+                  </div>
                   <div className="breaker-down">
                     <button
                       className="chevron-style"
@@ -96,7 +120,7 @@ const About = () => {
             })}
           {language === "spanish" &&
             dataAboutSp.map((item, itemIndex) => {
-              const { id, image, text } = item;
+              const { id, image, text, skills } = item;
               let position = "nextSlide";
               if (itemIndex === index) {
                 position = "activeslide";
@@ -104,7 +128,30 @@ const About = () => {
               return (
                 <article key={id} className={`about-article ${position}`}>
                   <img src={image} alt="Claudio Aime" className="about-image" />
-                  <p className="about-text">{text}</p>
+                  <div className="projects-content">
+                    <p className="about-text">{text}</p>
+                    {skills ? (
+                      <section>
+                        <h2>Habilidades</h2>
+                        <div className="skills-container-images">
+                          <FontAwesomeIcon icon={faHtml5} />
+                          <FontAwesomeIcon icon={faCss3} />
+                          <FontAwesomeIcon icon={faJs} />
+                          <FontAwesomeIcon icon={faReact} />
+                          <FontAwesomeIcon icon={faMobileAlt} />
+                        </div>
+                        <div className="skills-container-titles">
+                          <h4>HTML5</h4>
+                          <h4>CSS3</h4>
+                          <h4>JavaScript</h4>
+                          <h4>React</h4>
+                          <h4>Responsive</h4>
+                        </div>
+                      </section>
+                    ) : (
+                      <p></p>
+                    )}
+                  </div>
                   <div className="breaker-down">
                     <button
                       className="chevron-style"
@@ -124,7 +171,7 @@ const About = () => {
             })}
           {language === "german" &&
             dataAboutDe.map((item, itemIndex) => {
-              const { id, image, text } = item;
+              const { id, image, text, skills } = item;
               let position = "nextSlide";
               if (itemIndex === index) {
                 position = "activeslide";
@@ -132,7 +179,30 @@ const About = () => {
               return (
                 <article key={id} className={`about-article ${position}`}>
                   <img src={image} alt="Claudio Aime" className="about-image" />
-                  <p className="about-text">{text}</p>
+                  <div className="projects-content">
+                    <p className="about-text">{text}</p>
+                    {skills ? (
+                      <section>
+                        <h2>Fähigkeiten</h2>
+                        <div className="skills-container-images">
+                          <FontAwesomeIcon icon={faHtml5} />
+                          <FontAwesomeIcon icon={faCss3} />
+                          <FontAwesomeIcon icon={faJs} />
+                          <FontAwesomeIcon icon={faReact} />
+                          <FontAwesomeIcon icon={faMobileAlt} />
+                        </div>
+                        <div className="skills-container-titles">
+                          <h4>HTML5</h4>
+                          <h4>CSS3</h4>
+                          <h4>JavaScript</h4>
+                          <h4>React</h4>
+                          <h4>Responsive</h4>
+                        </div>
+                      </section>
+                    ) : (
+                      <p></p>
+                    )}
+                  </div>
                   <div className="breaker-down">
                     <button
                       className="chevron-style"
