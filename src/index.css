@@ -1665,6 +1665,7 @@ article.nextSlide {
 
 .introduction {
   animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  height: 100vh;
 }
 
 @keyframes scale-in-center {
@@ -1675,5 +1676,41 @@ article.nextSlide {
   100% {
     transform: scale(1);
     opacity: 1;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .btn-close-left,
+  .btn-close-right {
+    font-size: 4vw;
+  }
+
+  .header-subtitle {
+    font-size: 8vw;
+  }
+
+  .about-article {
+    flex-direction: column;
+  }
+
+  .section-about {
+    width: 95%;
+    height: 90vh;
+    top: 6vh;
+    left: 2vw;
+  }
+
+  .about-image {
+    width: 40%;
+    height: unset;
+    margin: 15px auto;
+  }
+
+  .about-text {
+    text-align: justify;
+  }
+
+  .skills-container {
+    margin-top: -20px;
   }
 }

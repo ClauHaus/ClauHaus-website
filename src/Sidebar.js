@@ -4,6 +4,7 @@ import useSound from "use-sound";
 import pop from "./sounds/pop.mp3";
 import themeSound from "./sounds/themeSound.mp3";
 import clickLanguages from "./sounds/clickLanguages.mp3";
+import thunder from "./sounds/thunder.wav";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBolt,
@@ -59,6 +60,7 @@ const Sidebar = () => {
   const [playPop] = useSound(pop, { volume: 0.5 });
   const [playthemeSound] = useSound(themeSound, { volume: 0.5 });
   const [playLanguages] = useSound(clickLanguages, { volume: 0.5 });
+  const [playThunder] = useSound(thunder, { volume: 0.5 });
 
   const makeSound = () => {
     setSound(!sound);
@@ -84,7 +86,9 @@ const Sidebar = () => {
           </h3>
           <button
             className={`bolt-dashboard ${thunderOpacity}`}
-            onClick={() => applyThunder()}
+            onClick={() =>
+              sound ? (applyThunder(), playThunder()) : applyThunder()
+            }
           >
             <FontAwesomeIcon icon={faBolt} />
           </button>

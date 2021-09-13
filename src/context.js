@@ -101,7 +101,7 @@ const AppProvider = ({ children }) => {
     setTimeout(() => {
       setThunderMove("");
       setThunderOpacity("");
-    }, 3000);
+    }, 2500);
     // return () => clearTimeout(thunderTime);
   };
 

@@ -80,7 +80,7 @@ const About = () => {
                   <div className="projects-content">
                     <p className="about-text">{text}</p>
                     {skills ? (
-                      <section>
+                      <section className="skills-container">
                         <h2>Skills</h2>
                         <div className="skills-container-images">
                           <FontAwesomeIcon icon={faHtml5} />
@@ -131,7 +131,7 @@ const About = () => {
                   <div className="projects-content">
                     <p className="about-text">{text}</p>
                     {skills ? (
-                      <section>
+                      <section className="skills-container">
                         <h2>Habilidades</h2>
                         <div className="skills-container-images">
                           <FontAwesomeIcon icon={faHtml5} />
@@ -182,7 +182,7 @@ const About = () => {
                   <div className="projects-content">
                     <p className="about-text">{text}</p>
                     {skills ? (
-                      <section>
+                      <section className="skills-container">
                         <h2>Fähigkeiten</h2>
                         <div className="skills-container-images">
                           <FontAwesomeIcon icon={faHtml5} />
