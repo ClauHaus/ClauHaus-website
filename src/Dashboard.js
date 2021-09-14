@@ -4,7 +4,7 @@ import useSound from "use-sound";
 import pop from "./sounds/pop.mp3";
 import themeSound from "./sounds/themeSound.mp3";
 import clickLanguages from "./sounds/clickLanguages.mp3";
-import thunder from "./sounds/thunder.wav";
+import thunder from "./sounds/thunder.mp3";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBars,
@@ -26,6 +26,7 @@ const Dashboard = () => {
     setSound,
     applyThunder,
     thunderOpacity,
+    thunderMove,
   } = useGlobalContext();
 
   const [spanish, setSpanish] = useState("");
@@ -79,7 +80,7 @@ const Dashboard = () => {
     <section>
       <div className="title-container">
         <div className="title">
-          <h3 className={`dashboard-title ${thunderOpacity}`}>ClauHaus</h3>
+          <h3 className={`dashboard-title ${thunderMove}`}>ClauHaus</h3>
           <button
             className={`bolt-dashboard ${thunderOpacity}`}
             onClick={() =>

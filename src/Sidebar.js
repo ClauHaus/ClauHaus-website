@@ -4,7 +4,7 @@ import useSound from "use-sound";
 import pop from "./sounds/pop.mp3";
 import themeSound from "./sounds/themeSound.mp3";
 import clickLanguages from "./sounds/clickLanguages.mp3";
-import thunder from "./sounds/thunder.wav";
+import thunder from "./sounds/thunder.mp3";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faBolt,
@@ -28,6 +28,7 @@ const Sidebar = () => {
     applyThunder,
     thunderOpacity,
     thunderMove,
+    thunderOpacitySidebar,
   } = useGlobalContext();
 
   const [spanish, setSpanish] = useState("");
@@ -78,10 +79,11 @@ const Sidebar = () => {
   };
 
   return (
-    <section className={`sidebar ${sideBar} ${thunderMove}`}>
+    //Revisar esta classname
+    <section className={`sidebar ${sideBar} ${thunderOpacitySidebar}`}>
       <div className="title-container">
         <div className="title">
-          <h3 className={`sidebar-dashboard-title ${thunderOpacity}`}>
+          <h3 className={`sidebar-dashboard-title ${thunderOpacitySidebar}`}>
             ClauHaus
           </h3>
           <button
@@ -95,7 +97,7 @@ const Sidebar = () => {
         </div>
         <div className="sidebar-btn-toggle">
           <button
-            className={`sidebar-btn-options ${thunderOpacity}`}
+            className={`sidebar-btn-options ${thunderOpacitySidebar}`}
             onClick={() => setSideBarOpen("")}
           >
             <FontAwesomeIcon icon={faTimes} />
@@ -108,7 +110,7 @@ const Sidebar = () => {
           <>
             <li>
               <button
-                className={`sidebar-btn-top ${english} ${thunderMove}`}
+                className={`sidebar-btn-top ${english} ${thunderOpacitySidebar}`}
                 value="english"
                 onClick={(e) =>
                   sound
@@ -121,7 +123,7 @@ const Sidebar = () => {
             </li>
             <li>
               <button
-                className={`sidebar-btn-top ${spanish} ${thunderMove}`}
+                className={`sidebar-btn-top ${spanish} ${thunderOpacitySidebar}`}
                 value="spanish"
                 onClick={(e) =>
                   sound
@@ -134,7 +136,7 @@ const Sidebar = () => {
             </li>
             <li>
               <button
-                className={`sidebar-btn-top ${german}${thunderMove}`}
+                className={`sidebar-btn-top ${german}${thunderOpacitySidebar}`}
                 value="german"
                 onClick={(e) =>
                   sound
@@ -151,7 +153,7 @@ const Sidebar = () => {
           <>
             <li>
               <button
-                className={`sidebar-btn-top ${english}${thunderMove}`}
+                className={`sidebar-btn-top ${english}${thunderOpacitySidebar}`}
                 value="english"
                 onClick={(e) =>
                   sound
@@ -164,7 +166,7 @@ const Sidebar = () => {
             </li>
             <li>
               <button
-                className={`sidebar-btn-top ${spanish} ${thunderMove}`}
+                className={`sidebar-btn-top ${spanish} ${thunderOpacitySidebar}`}
                 value="spanish"
                 onClick={(e) =>
                   sound
@@ -177,7 +179,7 @@ const Sidebar = () => {
             </li>
             <li>
               <button
-                className={`sidebar-btn-top ${german}${thunderMove}`}
+                className={`sidebar-btn-top ${german}${thunderOpacitySidebar}`}
                 value="german"
                 onClick={(e) =>
                   sound
@@ -194,7 +196,7 @@ const Sidebar = () => {
           <>
             <li>
               <button
-                className={`sidebar-btn-top ${english}${thunderMove}`}
+                className={`sidebar-btn-top ${english}${thunderOpacitySidebar}`}
                 value="english"
                 onClick={(e) =>
                   sound
@@ -207,7 +209,7 @@ const Sidebar = () => {
             </li>
             <li>
               <button
-                className={`sidebar-btn-top ${spanish} ${thunderMove}`}
+                className={`sidebar-btn-top ${spanish} ${thunderOpacitySidebar}`}
                 value="spanish"
                 onClick={(e) =>
                   sound
@@ -220,7 +222,7 @@ const Sidebar = () => {
             </li>
             <li>
               <button
-                className={`sidebar-btn-top ${german} ${thunderMove}`}
+                className={`sidebar-btn-top ${german} ${thunderOpacitySidebar}`}
                 value="german"
                 onClick={(e) =>
                   sound
@@ -236,7 +238,7 @@ const Sidebar = () => {
         <li>
           {theme === "light" && (
             <button
-              className={`sidebar-btn-top-theme ${thunderMove}`}
+              className={`sidebar-btn-top-theme ${thunderOpacitySidebar}`}
               onClick={() => (sound ? soundPop() : setTheme("dark"))}
             >
               <FontAwesomeIcon icon={faSun} />
@@ -244,7 +246,7 @@ const Sidebar = () => {
           )}
           {theme === "dark" && (
             <button
-              className={`sidebar-btn-top-theme ${thunderMove}`}
+              className={`sidebar-btn-top-theme ${thunderOpacitySidebar}`}
               onClick={() => (sound ? soundPop() : setTheme("light"))}
             >
               <FontAwesomeIcon icon={faMoon} />
@@ -253,7 +255,7 @@ const Sidebar = () => {
         </li>
         <li>
           <button
-            className={`sidebar-btn-top-theme ${thunderMove}`}
+            className={`sidebar-btn-top-theme ${thunderOpacitySidebar}`}
             onClick={() => makeSound()}
           >
             {sound ? (

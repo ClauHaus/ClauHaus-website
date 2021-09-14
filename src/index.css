@@ -653,6 +653,15 @@ li {
   background: var(--breaker);
 }
 
+.breaker-footer {
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 20px;
+  background: red;
+  background: var(--breaker);
+}
+
 /*------------------*/
 /*----- HEADER -----*/
 /*------------------*/
@@ -1588,7 +1597,15 @@ article.nextSlide {
 .thunder-move {
   background: black;
   color: white;
-  box-shadow: 6px 6px 9px #cbced1, -6px -6px 9px white;
+  box-shadow: 4px 4px 9px #cbced1, -4px -4px 9px white;
+  animation: vibrate-3 0.7s linear infinite both;
+}
+
+.thunder-opacity-sidebar {
+  background: black;
+  color: white;
+  border-bottom: none;
+  box-shadow: 3px 3px 9px #cbced1, -3px -3px 9px white;
   animation: vibrate-3 0.7s linear infinite both;
 }
 

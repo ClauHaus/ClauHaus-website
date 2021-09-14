@@ -17,6 +17,7 @@ const AppProvider = ({ children }) => {
   const [sectionOpacity, setSectionOpacity] = useState("");
   const [thunderMove, setThunderMove] = useState("");
   const [thunderOpacity, setThunderOpacity] = useState("");
+  const [thunderOpacitySidebar, setThunderOpacitySidebar] = useState("");
 
   const selectedLanguage = localStorage.getItem("newLanguage");
   const selectedTheme = localStorage.getItem("newTheme");
@@ -98,10 +99,12 @@ const AppProvider = ({ children }) => {
   const applyThunder = () => {
     setThunderMove("thunder-move");
     setThunderOpacity("thunder-opacity");
+    setThunderOpacitySidebar("thunder-opacity-sidebar");
     setTimeout(() => {
       setThunderMove("");
       setThunderOpacity("");
-    }, 2500);
+      setThunderOpacitySidebar("");
+    }, 3500);
     // return () => clearTimeout(thunderTime);
   };
 
@@ -125,6 +128,7 @@ const AppProvider = ({ children }) => {
         sectionOpacity,
         thunderMove,
         thunderOpacity,
+        thunderOpacitySidebar,
         setLanguage,
         setTheme,
         setSound,
