@@ -1580,7 +1580,7 @@ article.nextSlide {
   background: var(--sectionBackground);
   color: var(--primary);
   font-family: var(--retroSmall);
-  border-top: 2px solid var(--breaker);
+  border-top: 2px solid var(--secondary);
 }
 
 .thunder-opacity {
@@ -1668,7 +1668,7 @@ article.nextSlide {
   }
   .section-about {
     width: 75%;
-    min-height: 70vh;
+    min-height: 60vh;
   }
 
   .about-image {
@@ -1710,6 +1710,10 @@ article.nextSlide {
   .social-text {
     font-size: 2.5vw;
   }
+
+  .projects-links {
+    font-size: 2vw;
+  }
 }
 
 /*------------------------*/
@@ -1737,7 +1741,19 @@ article.nextSlide {
 
   .section-about {
     top: 9vh;
-    height: 85vh;
+    height: 82vh;
+  }
+}
+
+/*------MEDIA QUERIES 525px--------*/
+@media screen and (max-width: 525px) {
+  .about-text {
+    font-size: 3.5vw;
+  }
+
+  .section-about {
+    top: 9vh;
+    height: 80vh;
   }
 }
 
@@ -1761,6 +1777,28 @@ article.nextSlide {
   }
   h3 {
     font-size: 16px;
+  }
+  .section-about {
+    top: 7vh;
+    left: 5vw;
+    width: 90%;
+  }
+
+  .header-subtitle {
+    font-size: 5vw;
+  }
+
+  .btn-close-left {
+    font-size: 2.5vw;
+  }
+
+  .about-image {
+    width: 25vw;
+  }
+
+  .about-text,
+  .chevron-style {
+    font-size: 4vw;
   }
 }
 
