@@ -653,15 +653,6 @@ li {
   background: var(--breaker);
 }
 
-.breaker-footer {
-  position: absolute;
-  bottom: 0px;
-  width: 100%;
-  height: 20px;
-  background: red;
-  background: var(--breaker);
-}
-
 /*------------------*/
 /*----- HEADER -----*/
 /*------------------*/
@@ -1131,7 +1122,7 @@ article.nextSlide {
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
   border-radius: 20px;
-  min-height: 50vh;
+  min-height: 70vh;
   position: absolute;
   top: 15vh;
   left: 10vw;
@@ -1188,6 +1179,8 @@ article.nextSlide {
 
 .about-text {
   font-size: 1.375rem;
+  font-size: 1.375rem;
+  font-size: 2vw;
   text-align: right;
   padding-left: 20px;
   padding-right: 20px;
@@ -1295,7 +1288,6 @@ article.nextSlide {
   /* margin-bottom: 20px; */
   border-radius: 20px;
   min-height: 70vh;
-  min-height: 65vh;
   position: absolute;
   top: 20vh;
   right: 10vw;
@@ -1340,7 +1332,8 @@ article.nextSlide {
 
 .projects-text {
   text-align: left;
-  font-size: 20px;
+  margin-top: -5px;
+  font-size: 2vw;
   padding-left: 30px;
   padding-right: 30px;
 }
@@ -1367,6 +1360,7 @@ article.nextSlide {
   flex-direction: row;
   justify-content: center;
   font-size: 1.5vw;
+  margin-top: -10px;
 }
 
 .projects-links {
@@ -1407,7 +1401,7 @@ article.nextSlide {
   border-radius: 20px;
   min-height: 70vh;
   position: absolute;
-  top: 25vh;
+  top: 15vh;
   left: 20vw;
   animation: scale-in-bl 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
 }
@@ -1534,6 +1528,7 @@ article.nextSlide {
   padding-left: 25px;
   padding-right: 25px;
   text-align: left;
+  font-size: 2vw;
 }
 
 .social-links {
@@ -1585,6 +1580,7 @@ article.nextSlide {
   background: var(--sectionBackground);
   color: var(--primary);
   font-family: var(--retroSmall);
+  border-top: 2px solid var(--breaker);
 }
 
 .thunder-opacity {
@@ -1647,6 +1643,106 @@ article.nextSlide {
 
 /*-----------------------MEDIA QUERIES------------------*/
 
+@media screen and (max-width: 2560px) {
+  .intro-title {
+    font-size: 6vw;
+  }
+}
+
+@media screen and (max-width: 1440px) {
+  .intro-title {
+    font-size: 6vw;
+  }
+
+  h3 {
+    font-size: 22px;
+  }
+}
+
+/*------MEDIA QUERIES 768px--------*/
+
+@media screen and (max-width: 768px) {
+  .main {
+    width: 80%;
+    justify-content: space-around;
+  }
+  .section-about {
+    width: 75%;
+    min-height: 70vh;
+  }
+
+  .about-image {
+    height: unset;
+    width: 20vw;
+  }
+
+  .about-text {
+    font-size: 2.5vw;
+  }
+
+  .skills-container {
+    margin-right: 5px;
+  }
+
+  .section-projects {
+    top: 15vh;
+    width: 75%;
+    /* height: 85vh; */
+  }
+
+  .projects-text {
+    font-size: 2.5vw;
+  }
+
+  .section-contact {
+    width: 75%;
+    top: 12vh;
+    left: 15vw;
+  }
+
+  .section-connection {
+    width: 75%;
+    min-height: 50vh;
+    top: 35vh;
+    left: 15vw;
+  }
+
+  .social-text {
+    font-size: 2.5vw;
+  }
+}
+
+/*------------------------*/
+@media screen and (max-width: 600px) {
+  .about-article {
+    flex-direction: column;
+  }
+  .about-image {
+    width: 20vw;
+    height: unset;
+    margin: 15px auto;
+  }
+
+  .about-text {
+    text-align: justify;
+  }
+
+  .skills-container {
+    margin-top: -22px;
+  }
+
+  .skills-container-titles {
+    margin-top: -10px;
+  }
+
+  .section-about {
+    top: 9vh;
+    height: 85vh;
+  }
+}
+
+/*------MEDIA QUERIES 430px--------*/
+
 @media screen and (max-width: 430px) {
   .intro-title {
     font-size: 6vw;
@@ -1668,18 +1764,6 @@ article.nextSlide {
   }
 }
 
-@media screen and (max-width: 375px) {
-  h3 {
-    font-size: 14px;
-  }
-}
-
-@media screen and (max-width: 320px) {
-  h3 {
-    font-size: 12px;
-  }
-}
-
 .introduction {
   animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
   height: 100vh;
@@ -1696,7 +1780,13 @@ article.nextSlide {
   }
 }
 
+/*------MEDIA QUERIES 375px--------*/
+
 @media screen and (max-width: 375px) {
+  h3 {
+    font-size: 14px;
+  }
+
   .btn-close-left,
   .btn-close-right {
     font-size: 4vw;
@@ -1729,5 +1819,13 @@ article.nextSlide {
 
   .skills-container {
     margin-top: -20px;
+  }
+}
+
+/*------MEDIA QUERIES 320px--------*/
+
+@media screen and (max-width: 320px) {
+  h3 {
+    font-size: 12px;
   }
 }

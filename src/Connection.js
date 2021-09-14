@@ -33,10 +33,10 @@ const Connection = () => {
               </button>
             </div>
             <div className="breaker"></div>
-            <h3 className="social-text">
+            <p className="social-text">
               If anything that you saw in this web catches your interest, you
               are more than welcome to follow me in these Social Networks.
-            </h3>
+            </p>
             <div className="connect-container-images">
               <a
                 href="https://twitter.com/ClauHaus_"
@@ -101,10 +101,10 @@ const Connection = () => {
               </button>
             </div>
             <div className="breaker"></div>
-            <h3 className="social-text">
+            <p className="social-text">
               Si algo que viste en esta Web te llamo la atención, estás más que
               bienvenido a seguirme en estas redes sociales.
-            </h3>
+            </p>
             <div className="connect-container-images">
               <a
                 href="https://twitter.com/ClauHaus_"
@@ -169,11 +169,11 @@ const Connection = () => {
               </button>
             </div>
             <div className="breaker"></div>
-            <h3 className="social-text">
+            <p className="social-text">
               Wenn etwas, das du in diesem Web gesehen haben, deine Interesse
               geweckt hat, du bist herzlich willkommen, mir in diesen sozialen
               Netzwerken zu folgen.
-            </h3>
+            </p>
             <div className="connect-container-images">
               <a
                 href="https://twitter.com/ClauHaus_"
