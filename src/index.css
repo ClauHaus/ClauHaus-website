@@ -1779,7 +1779,7 @@ article.nextSlide {
     font-size: 16px;
   }
   .section-about {
-    top: 7vh;
+    top: 2px;
     left: 5vw;
     width: 90%;
   }
@@ -1840,23 +1840,28 @@ article.nextSlide {
 
   .section-about {
     width: 95%;
-    height: 90vh;
-    top: 6vh;
-    left: 2vw;
+    height: 75vh;
+    top: 2px;
+    left: 2.5vw;
   }
 
   .about-image {
-    width: 40%;
+    width: 35%;
     height: unset;
-    margin: 15px auto;
+    margin: 12px auto;
   }
 
   .about-text {
     text-align: justify;
+    font-size: 4.5vw;
   }
 
   .skills-container {
-    margin-top: -20px;
+    margin-top: -30px;
+  }
+
+  .skills-container-images {
+    margin-top: -10px;
   }
 }
 
