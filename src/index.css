@@ -1278,6 +1278,10 @@ article.nextSlide {
   box-shadow: none;
 }
 
+.projects-small {
+  display: none;
+}
+
 .section-projects {
   width: 60%;
   background: var(--sectionBackground);
@@ -1836,15 +1840,19 @@ article.nextSlide {
 
   .section-projects {
     width: 90vw;
-    height: 65vh;
+    height: 85vh;
     top: 8vh;
     right: 5vw;
   }
 
+  .projects-article {
+    flex-direction: column-reverse;
+  }
+
   .projects-image {
-    height: 120px;
-    width: 120px;
-    margin: 25px 10px 10px 10px;
+    height: unset;
+    width: 25%;
+    margin: 20px auto 5px auto;
   }
 
   .projects-text {
