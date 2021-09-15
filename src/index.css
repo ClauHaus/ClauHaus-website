@@ -1839,10 +1839,10 @@ article.nextSlide {
   }
 
   .section-projects {
-    width: 90vw;
+    top: 2px;
+    left: 5vw;
+    width: 90%;
     height: 85vh;
-    top: 8vh;
-    right: 5vw;
   }
 
   .projects-article {
@@ -1949,6 +1949,21 @@ article.nextSlide {
     height: 40vh;
     top: 15vh;
     left: 5vw;
+  }
+
+  .section-projects {
+    top: 2px;
+    left: 5vw;
+    width: 90%;
+    height: 78vh;
+  }
+
+  .link-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-size: 1.5vw;
+    margin-top: -20px;
   }
 }
 
