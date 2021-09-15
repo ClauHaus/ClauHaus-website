@@ -474,7 +474,8 @@ html {
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 20px;
-  min-height: 70vh;
+  /* min-height: 70vh; */
+  height: 70vh;
 }
 
 a {
@@ -658,7 +659,8 @@ li {
 /*------------------*/
 
 .top-section {
-  min-height: 50vh;
+  /* min-height: 50vh; */
+  height: 50vh;
 }
 
 .header {
@@ -667,7 +669,8 @@ li {
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  min-height: 50vh;
+  /* min-height: 50vh; */
+  height: 50vh;
 }
 
 .image-container {
@@ -1052,7 +1055,8 @@ li {
   display: grid;
   width: 60%;
   margin: auto;
-  min-height: 80vh;
+  /* min-height: 80vh; */
+  height: 80vh;
   /* border: 5px solid red; */
   grid-auto-columns: 1fr;
   grid-template-columns: 1fr 1fr;
@@ -1122,7 +1126,8 @@ article.nextSlide {
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
   border-radius: 20px;
-  min-height: 70vh;
+  /* min-height: 70vh; */
+  height: 70vh;
   position: absolute;
   top: 15vh;
   left: 10vw;
@@ -1287,7 +1292,7 @@ article.nextSlide {
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
   border-radius: 20px;
-  min-height: 70vh;
+  height: 70vh;
   position: absolute;
   top: 20vh;
   right: 10vw;
@@ -1399,7 +1404,7 @@ article.nextSlide {
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
   border-radius: 20px;
-  min-height: 70vh;
+  height: 70vh;
   position: absolute;
   top: 15vh;
   left: 20vw;
@@ -1492,7 +1497,8 @@ article.nextSlide {
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
   border-radius: 20px;
-  min-height: 40vh;
+  /* min-height: 40vh; */
+  height: 40vh;
   position: absolute;
   top: 45vh;
   left: 25vw;
@@ -1641,6 +1647,22 @@ article.nextSlide {
   }
 }
 
+.introduction {
+  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  height: 100vh;
+}
+
+@keyframes scale-in-center {
+  0% {
+    transform: scale(0);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
 /*-----------------------MEDIA QUERIES------------------*/
 
 @media screen and (max-width: 2560px) {
@@ -1668,7 +1690,7 @@ article.nextSlide {
   }
   .section-about {
     width: 75%;
-    min-height: 60vh;
+    height: 70vh;
   }
 
   .about-image {
@@ -1695,14 +1717,15 @@ article.nextSlide {
   }
 
   .section-contact {
-    width: 75%;
-    top: 12vh;
-    left: 15vw;
+    width: 80%;
+    height: 80vh;
+    top: 7vh;
+    left: 10vw;
   }
 
   .section-connection {
     width: 75%;
-    min-height: 50vh;
+    height: 50vh;
     top: 35vh;
     left: 15vw;
   }
@@ -1770,6 +1793,11 @@ article.nextSlide {
     width: 100%;
     margin: 10px auto;
   }
+
+  .connection {
+    margin-left: -25px;
+  }
+
   .title-container {
     justify-content: space-between;
     margin-left: 35px;
@@ -1782,6 +1810,7 @@ article.nextSlide {
     top: 2px;
     left: 5vw;
     width: 90%;
+    height: 90vh;
   }
 
   .header-subtitle {
@@ -1800,21 +1829,56 @@ article.nextSlide {
   .chevron-style {
     font-size: 4vw;
   }
-}
 
-.introduction {
-  animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
-  height: 100vh;
-}
-
-@keyframes scale-in-center {
-  0% {
-    transform: scale(0);
-    opacity: 1;
+  .about:hover,
+  .contact:hover,
+  .connection:hover {
+    transform: scale(1.1);
   }
-  100% {
-    transform: scale(1);
-    opacity: 1;
+
+  .projects:hover {
+    transform: scale(1.05);
+  }
+
+  .section-projects {
+    width: 90vw;
+    height: 80vh;
+    top: 8vh;
+    right: 5vw;
+  }
+
+  .projects-image {
+    height: unset;
+    width: 25vw;
+  }
+
+  .projects-text {
+    font-size: 3.5vw;
+    padding-left: 15px;
+    padding-right: unset;
+  }
+
+  .projects-links {
+    font-size: 3vw;
+  }
+
+  .section-contact {
+    width: 90%;
+    top: 7vh;
+    left: 5vw;
+    height: 80vh;
+  }
+
+  .form-items {
+    width: 60%;
+  }
+
+  .form-btn {
+    width: 60%;
+  }
+
+  .social-text {
+    font-size: 3.5vw;
   }
 }
 
@@ -1823,6 +1887,14 @@ article.nextSlide {
 @media screen and (max-width: 375px) {
   h3 {
     font-size: 14px;
+  }
+
+  .about {
+    margin-left: 15px;
+  }
+
+  .connection {
+    margin-left: -15px;
   }
 
   .btn-close-left,
@@ -1840,15 +1912,15 @@ article.nextSlide {
 
   .section-about {
     width: 95%;
-    height: 88vh;
+    height: 86vh;
     top: 2px;
     left: 2.5vw;
   }
 
   .about-image {
-    width: 35%;
+    width: 30%;
     height: unset;
-    margin: 12px auto;
+    margin: 12px auto 5px auto;
   }
 
   .about-text {
@@ -1862,6 +1934,18 @@ article.nextSlide {
 
   .skills-container-images {
     margin-top: -10px;
+  }
+
+  .skills-container-titles {
+    margin-top: -20px;
+  }
+
+  .section-connection {
+    top: 7vh;
+    width: 90%;
+    height: 50vh;
+    top: 15vh;
+    left: 5vw;
   }
 }
 
