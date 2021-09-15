@@ -1845,7 +1845,8 @@ article.nextSlide {
     /* height: 150px; 120px?
     width: 150px; */
     height: unset;
-    width: 25%;
+    width: 100px;
+    margin: 15px;
   }
 
   .projects-text {
