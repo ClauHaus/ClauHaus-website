@@ -1836,14 +1836,14 @@ article.nextSlide {
 
   .section-projects {
     width: 90vw;
-    height: 70vh;
+    height: 65vh;
     top: 8vh;
     right: 5vw;
   }
 
   .projects-image {
-    height: unset;
-    width: 30%;
+    height: 150px;
+    width: 150px;
   }
 
   .projects-text {
@@ -1906,8 +1906,8 @@ article.nextSlide {
 
   .section-about {
     width: 95%;
-    height: 82vh;
-    top: 6vh;
+    height: 80vh;
+    top: 1vh;
     left: 2.5vw;
   }
 
