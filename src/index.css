@@ -443,7 +443,6 @@ html {
 /* .applicationPost {
   text-align: center;
   background-color: blue;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -474,7 +473,6 @@ html {
   margin-top: 20px;
   margin-bottom: 20px;
   border-radius: 20px;
-  /* min-height: 70vh; */
   height: 70vh;
 }
 
@@ -577,7 +575,6 @@ ul {
   margin-bottom: 20px;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  /* min-height: 70vh; */
 }
 
 .nav-top {
@@ -659,7 +656,6 @@ li {
 /*------------------*/
 
 .top-section {
-  /* min-height: 50vh; */
   height: 50vh;
 }
 
@@ -669,7 +665,7 @@ li {
   grid-template-rows: 1fr 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
-  /* min-height: 50vh; */
+
   height: 50vh;
 }
 
@@ -1055,7 +1051,7 @@ li {
   display: grid;
   width: 60%;
   margin: auto;
-  /* min-height: 80vh; */
+
   height: 80vh;
   /* border: 5px solid red; */
   grid-auto-columns: 1fr;
@@ -1126,7 +1122,6 @@ article.nextSlide {
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
   border-radius: 20px;
-  /* min-height: 70vh; */
   height: 70vh;
   position: absolute;
   top: 15vh;
@@ -1497,7 +1492,6 @@ article.nextSlide {
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
   border-radius: 20px;
-  /* min-height: 40vh; */
   height: 40vh;
   position: absolute;
   top: 45vh;
@@ -1842,14 +1836,14 @@ article.nextSlide {
 
   .section-projects {
     width: 90vw;
-    height: 80vh;
+    height: 70vh;
     top: 8vh;
     right: 5vw;
   }
 
   .projects-image {
     height: unset;
-    width: 25vw;
+    width: 30%;
   }
 
   .projects-text {
@@ -1866,7 +1860,7 @@ article.nextSlide {
     width: 90%;
     top: 7vh;
     left: 5vw;
-    height: 80vh;
+    height: 70vh;
   }
 
   .form-items {
@@ -1912,8 +1906,8 @@ article.nextSlide {
 
   .section-about {
     width: 95%;
-    height: 86vh;
-    top: 2px;
+    height: 82vh;
+    top: 6vh;
     left: 2.5vw;
   }
 
@@ -1943,7 +1937,7 @@ article.nextSlide {
   .section-connection {
     top: 7vh;
     width: 90%;
-    height: 50vh;
+    height: 40vh;
     top: 15vh;
     left: 5vw;
   }
