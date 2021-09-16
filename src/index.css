@@ -1782,7 +1782,7 @@ article.nextSlide {
 
 @media screen and (max-width: 430px) {
   .intro-title {
-    font-size: 6vw;
+    font-size: 10vw;
   }
   .bolt-intro {
     font-size: 25vw;
@@ -1815,12 +1815,26 @@ article.nextSlide {
     font-size: 5vw;
   }
 
-  .btn-close-left {
+  .btn-close-left,
+  .btn-close-right {
     font-size: 2.5vw;
+  }
+
+  .btn-close-left {
+    left: 15px;
+  }
+
+  .btn-close-right {
+    right: 15px;
   }
 
   .about-image {
     width: 25vw;
+  }
+
+  .skills-container-images,
+  .skills-container-titles {
+    font-size: 1rem;
   }
 
   .about-text,
@@ -1857,8 +1871,8 @@ article.nextSlide {
 
   .projects-text {
     font-size: 3.5vw;
-    padding-left: 15px;
-    padding-right: unset;
+    padding-left: 10px;
+    padding-right: 10px;
   }
 
   .projects-links {
@@ -1902,7 +1916,11 @@ article.nextSlide {
 
   .btn-close-left,
   .btn-close-right {
-    font-size: 4vw;
+    font-size: 3.5vw;
+  }
+
+  .btn-close-right {
+    right: 10px;
   }
 
   .header-subtitle {
@@ -1952,7 +1970,7 @@ article.nextSlide {
   }
 
   .section-projects {
-    top: 2px;
+    top: 1vh;
     left: 5vw;
     width: 90%;
     height: 78vh;
@@ -1972,5 +1990,24 @@ article.nextSlide {
 @media screen and (max-width: 320px) {
   h3 {
     font-size: 12px;
+  }
+
+  .projects-text {
+    font-size: 4vw;
+  }
+
+  .section-contact {
+    width: 90%;
+    top: 1vh;
+    left: 5vw;
+    height: 80vh;
+  }
+
+  .social-text {
+    font-size: 4vw;
+  }
+
+  .connect-container-images {
+    font-size: 1rem;
   }
 }
