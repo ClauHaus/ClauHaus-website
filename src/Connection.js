@@ -1,5 +1,7 @@
 import React from "react";
 import { useGlobalContext } from "./context";
+import useSound from "use-sound";
+import close from "./sounds/close.mp3";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faFacebook,
@@ -10,11 +12,12 @@ import {
   faCodepen,
 } from "@fortawesome/free-brands-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import clauhaus from "./images/clauhaus.png";
-import move from "./images/move.gif";
 
 const Connection = () => {
-  const { language, closeConnection, closingConnection } = useGlobalContext();
+  const { language, closeConnection, closingConnection, sound } =
+    useGlobalContext();
+
+  const [playClose] = useSound(close, { volume: 0.5 });
   return (
     <>
       <section
@@ -27,7 +30,9 @@ const Connection = () => {
               <h3 className="header-subtitle">Connect with me</h3>
               <button
                 className="btn-close-right"
-                onClick={() => closeConnection()}
+                onClick={() =>
+                  sound ? (closeConnection(), playClose()) : closeConnection()
+                }
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>

@@ -1,21 +1,15 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "./context";
+import useSound from "use-sound";
+import close from "./sounds/close.mp3";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faCss3,
-  faHtml5,
-  faJs,
-  faReact,
-} from "@fortawesome/free-brands-svg-icons";
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
 
 const API_PATH = "http://localhost:3000/clauhaus/api/index.php";
 
 const Contact = () => {
-  const { language, setContact, closeContact, closingContact } =
-    useGlobalContext();
+  const { language, closeContact, closingContact, sound } = useGlobalContext();
 
   const [formInformation, setFormInformation] = useState({
     fullName: "",
@@ -33,23 +27,23 @@ const Contact = () => {
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
-    axios({
-      method: "post",
-      url: `${API_PATH}`,
-      headers: { "content-type": "application/json" },
-      // data: this.state,
-      data: formInformation,
-    })
-      .then((result) => {
-        // this.setState
-        formInformation({
-          mailSent: result.data.sent,
-        });
-      })
-      .catch((error) => formInformation.error);
+    // axios({
+    //   method: "post",
+    //   url: `${API_PATH}`,
+    //   headers: { "content-type": "application/json" },
+    //   // data: this.state,
+    //   data: formInformation,
+    // })
+    //   .then((result) => {
+    //     // this.setState
+    //     formInformation({
+    //       mailSent: result.data.sent,
+    //     });
+    //   })
+    //   .catch((error) => formInformation.error);
   };
 
-  // console.log(formInformation);
+  const [playClose] = useSound(close, { volume: 0.5 });
 
   return (
     <>
@@ -58,7 +52,12 @@ const Contact = () => {
           <>
             <div className="header-about">
               <h3 className="header-subtitle">Contact</h3>
-              <button className="btn-close-left" onClick={() => closeContact()}>
+              <button
+                className="btn-close-left"
+                onClick={() =>
+                  sound ? (closeContact(), playClose()) : closeContact()
+                }
+              >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
             </div>
@@ -66,20 +65,20 @@ const Contact = () => {
             <section>
               <form
                 className="form"
-                // action="mailto:claudio.aime32@gmail.com"
+                action="mailto:claudio.aime32@gmail.com"
                 // enctype="multipart/form-data"
-                method="post"
+                method="get"
                 name="contact_form"
-                action="/action_page.php"
-                onSubmit={handleFormSubmit}
+                // action="/action_page.php"
+                // onSubmit={handleFormSubmit}
               >
                 <label htmlFor="name">
                   <input
                     className="form-items"
                     type="text"
                     name="fullName"
-                    value={formInformation.fullName}
-                    onChange={handleChange}
+                    // value={formInformation.fullName}
+                    // onChange={handleChange}
                     id="fullName"
                     placeholder="Enter your name"
                     required
@@ -90,8 +89,8 @@ const Contact = () => {
                     className="form-items"
                     type="text"
                     name="email"
-                    value={formInformation.email}
-                    onChange={handleChange}
+                    // value={formInformation.email}
+                    // onChange={handleChange}
                     id="email"
                     placeholder="Enter your email"
                     required
@@ -100,9 +99,8 @@ const Contact = () => {
                 <textarea
                   className="form-items"
                   name="message"
-                  value={formInformation.message}
-                  onChange={handleChange}
-                  n
+                  // value={formInformation.message}
+                  // onChange={handleChange}
                   id="message"
                   rows="10"
                   placeholder="Enter your message..."
@@ -117,7 +115,12 @@ const Contact = () => {
           <>
             <div className="header-about">
               <h3 className="header-subtitle">Contacto</h3>
-              <button className="btn-close-left" onClick={() => closeContact()}>
+              <button
+                className="btn-close-left"
+                onClick={() =>
+                  sound ? (closeContact(), playClose()) : closeContact()
+                }
+              >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
             </div>
@@ -125,12 +128,12 @@ const Contact = () => {
             <section>
               <form
                 className="form"
-                // action="mailto:claudio.aime32@gmail.com"
+                action="mailto:claudio.aime32@gmail.com"
                 // enctype="multipart/form-data"
-                method="post"
+                method="get"
                 name="contact_form"
-                action="/action_page.php"
-                onSubmit={handleFormSubmit}
+                // action="/action_page.php"
+                // onSubmit={handleFormSubmit}
               >
                 <label htmlFor="name">
                   <input
@@ -161,7 +164,6 @@ const Contact = () => {
                   name="message"
                   value={formInformation.message}
                   onChange={handleChange}
-                  n
                   id="message"
                   rows="10"
                   placeholder="Introduce tu mensaje..."
@@ -180,7 +182,12 @@ const Contact = () => {
           <>
             <div className="header-about">
               <h3 className="header-subtitle">Kontakt</h3>
-              <button className="btn-close-left" onClick={() => closeContact()}>
+              <button
+                className="btn-close-left"
+                onClick={() =>
+                  sound ? (closeContact(), playClose()) : closeContact()
+                }
+              >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
             </div>
@@ -188,20 +195,20 @@ const Contact = () => {
             <section>
               <form
                 className="form"
-                // action="mailto:claudio.aime32@gmail.com"
+                action="mailto:claudio.aime32@gmail.com"
                 // enctype="multipart/form-data"
-                method="post"
+                method="get"
                 name="contact_form"
-                action="/action_page.php"
-                onSubmit={handleFormSubmit}
+                // action="/action_page.php"
+                // onSubmit={handleFormSubmit}
               >
                 <label htmlFor="name">
                   <input
                     className="form-items"
                     type="text"
                     name="fullName"
-                    value={formInformation.fullName}
-                    onChange={handleChange}
+                    // value={formInformation.fullName}
+                    // onChange={handleChange}
                     id="fullName"
                     placeholder="Ihren Namen eingeben"
                     required
@@ -212,8 +219,8 @@ const Contact = () => {
                     className="form-items"
                     type="text"
                     name="email"
-                    value={formInformation.email}
-                    onChange={handleChange}
+                    // value={formInformation.email}
+                    // onChange={handleChange}
                     id="email"
                     placeholder="Ihren Email eingeben"
                     required
@@ -222,9 +229,9 @@ const Contact = () => {
                 <textarea
                   className="form-items"
                   name="message"
-                  value={formInformation.message}
-                  onChange={handleChange}
-                  n
+                  // value={formInformation.message}
+                  // onChange={handleChange}
+
                   id="message"
                   rows="10"
                   placeholder="Ihre Nachricht eingeben..."

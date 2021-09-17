@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "./context";
+import useSound from "use-sound";
+import close from "./sounds/close.mp3";
+import clickLanguages from "./sounds/clickLanguages.mp3";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCss3,
@@ -16,8 +19,7 @@ import { faMobileAlt } from "@fortawesome/free-solid-svg-icons";
 import { dataAboutEn, dataAboutSp, dataAboutDe } from "./utils/dataAbout";
 
 const About = () => {
-  const { language, setAbout, closeAbout, closeSection, closingAbout } =
-    useGlobalContext();
+  const { language, closeAbout, closingAbout, sound } = useGlobalContext();
 
   const [index, setIndex] = useState(0);
 
@@ -48,6 +50,9 @@ const About = () => {
     }
   };
 
+  const [playClose] = useSound(close, { volume: 0.5 });
+  const [playLanguages] = useSound(clickLanguages, { volume: 0.5 });
+
   return (
     <>
       <section id="about" className={`section-about ${closingAbout}`}>
@@ -61,7 +66,10 @@ const About = () => {
           {language === "german" && (
             <h3 className="header-subtitle">Über mich</h3>
           )}
-          <button className="btn-close-left" onClick={() => closeAbout()}>
+          <button
+            className="btn-close-left"
+            onClick={() => (sound ? (closeAbout(), playClose()) : closeAbout())}
+          >
             <FontAwesomeIcon icon={faTimes} />
           </button>
         </div>
@@ -104,13 +112,17 @@ const About = () => {
                   <div className="breaker-down">
                     <button
                       className="chevron-style"
-                      onClick={() => prevPage()}
+                      onClick={() =>
+                        sound ? (prevPage(), playLanguages()) : prevPage()
+                      }
                     >
                       <FontAwesomeIcon icon={faChevronLeft} />
                     </button>
                     <button
                       className="chevron-style"
-                      onClick={() => nextPage()}
+                      onClick={() =>
+                        sound ? (nextPage(), playLanguages()) : nextPage()
+                      }
                     >
                       <FontAwesomeIcon icon={faChevronRight} />
                     </button>
@@ -155,13 +167,17 @@ const About = () => {
                   <div className="breaker-down">
                     <button
                       className="chevron-style"
-                      onClick={() => prevPage()}
+                      onClick={() =>
+                        sound ? (prevPage(), playLanguages()) : prevPage()
+                      }
                     >
                       <FontAwesomeIcon icon={faChevronLeft} />
                     </button>
                     <button
                       className="chevron-style"
-                      onClick={() => nextPage()}
+                      onClick={() =>
+                        sound ? (nextPage(), playLanguages()) : nextPage()
+                      }
                     >
                       <FontAwesomeIcon icon={faChevronRight} />
                     </button>
@@ -206,13 +222,17 @@ const About = () => {
                   <div className="breaker-down">
                     <button
                       className="chevron-style"
-                      onClick={() => prevPage()}
+                      onClick={() =>
+                        sound ? (prevPage(), playLanguages()) : prevPage()
+                      }
                     >
                       <FontAwesomeIcon icon={faChevronLeft} />
                     </button>
                     <button
                       className="chevron-style"
-                      onClick={() => nextPage()}
+                      onClick={() =>
+                        sound ? (nextPage(), playLanguages()) : nextPage()
+                      }
                     >
                       <FontAwesomeIcon icon={faChevronRight} />
                     </button>

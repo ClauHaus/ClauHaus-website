@@ -18,15 +18,6 @@ function App() {
   return (
     <section className="application">
       {intro && <Bolt />}
-      {/* {website && (
-        <>
-          <Languages />
-          <Header />
-          <About />
-          <Projects />
-          <Contact />
-        </>
-      )} */}
       {website && (
         <>
           <section className={`introduction ${thunderMove}`}>

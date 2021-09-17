@@ -794,7 +794,34 @@ li {
   border-style: none;
   cursor: pointer;
   /* -webkit-animation: pulsate-bck 1s ease-in-out infinite both; */
-  animation: pulsate-bck 1.5s ease-in-out infinite both;
+  /* animation: pulsate-bck 1.5s ease-in-out infinite both; */
+}
+
+.letter-h {
+  animation: wobble-hor-bottom 10s infinite both;
+}
+
+@keyframes wobble-hor-bottom {
+  0%,
+  100% {
+    transform: translateX(0);
+    transform-origin: 50% 50%;
+  }
+  15% {
+    transform: translateX(-6px) rotate(-6deg);
+  }
+  30% {
+    transform: translateX(4px) rotate(6deg);
+  }
+  45% {
+    transform: translateX(-4px) rotate(-3deg);
+  }
+  60% {
+    transform: translateX(3px) rotate(2deg);
+  }
+  75% {
+    transform: translateX(-1px) rotate(-1.2deg);
+  }
 }
 
 /* @-webkit-keyframes pulsate-bck {
@@ -1747,6 +1774,9 @@ article.nextSlide {
 
 /*------------------------*/
 @media screen and (max-width: 600px) {
+  h3 {
+    font-size: 18px;
+  }
   .about-article {
     flex-direction: column;
   }
@@ -1769,20 +1799,29 @@ article.nextSlide {
     margin-top: -10px;
   }
 
+  .skills-container-images {
+    margin-top: -10px;
+  }
+
   .section-about {
-    top: 9vh;
-    min-height: 85vh;
+    top: 2vh;
+    min-height: 90vh;
+  }
+
+  .connection {
+    width: 85%;
+    margin-left: -10px;
   }
 }
 
 /*------MEDIA QUERIES 525px--------*/
 @media screen and (max-width: 525px) {
   .about-text {
-    font-size: 3.5vw;
+    font-size: 2.5vw;
   }
 
   .section-about {
-    top: 7vh;
+    top: 1vh;
     min-height: 88vh;
   }
 }
@@ -1907,6 +1946,14 @@ article.nextSlide {
   .social-text {
     font-size: 3.5vw;
   }
+
+  .section-connection {
+    top: 7vh;
+    width: 90%;
+    height: 40vh;
+    top: 15vh;
+    left: 5vw;
+  }
 }
 
 /*------MEDIA QUERIES 375px--------*/
@@ -1943,13 +1990,9 @@ article.nextSlide {
 
   .section-about {
     width: 95%;
-    min-height: 80vh;
+    min-height: 85vh;
     top: 1vh;
     left: 2.5vw;
-  }
-
-  .breaker-down {
-    position: unset;
   }
 
   .about-image {
@@ -1996,6 +2039,10 @@ article.nextSlide {
     justify-content: center;
     font-size: 1.5vw;
     margin-top: -20px;
+  }
+
+  .connect-container-images {
+    font-size: 1.2rem;
   }
 }
 

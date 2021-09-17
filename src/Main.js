@@ -1,40 +1,27 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { useGlobalContext } from "./context";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import {
-  faBolt,
-  faTimes,
-  faSun,
-  faMoon,
-  faVolumeUp,
-  faVolumeMute,
-} from "@fortawesome/free-solid-svg-icons";
-import About from "./About";
+import useSound from "use-sound";
+import pop from "./sounds/pop.mp3";
 
 const Main = () => {
   const {
     language,
-    about,
-    setAbout,
-    setProjects,
-    setContact,
-    setConnection,
-    aboutClass,
     openAbout,
     openProjects,
     openContact,
     openConnection,
     sectionOpacity,
     thunderMove,
+    sound,
   } = useGlobalContext();
-  // const [aboutTitle, setAboutTitle] = useState("About me");
+
+  const [playPop] = useSound(pop, { volume: 0.5 });
+
   return (
     <section className="main">
       <div
         className={`section-title about ${sectionOpacity}${thunderMove}`}
-        onClick={() => openAbout()}
-        // onMouseEnter={() => setAboutTitle("ClauHaus")}
-        // onMouseEnter={() => setTitle("ClauHaus")}
+        onClick={() => (sound ? (openAbout(), playPop()) : openAbout())}
       >
         {language === "english" && <h3>About me</h3>}
         {language === "spanish" && <h3>Acerca de mí</h3>}
@@ -42,7 +29,7 @@ const Main = () => {
       </div>
       <div
         className={`section-title projects ${sectionOpacity}${thunderMove}`}
-        onClick={() => openProjects()}
+        onClick={() => (sound ? (openProjects(), playPop()) : openProjects())}
       >
         {language === "english" && <h3>Projects</h3>}
         {language === "spanish" && <h3>Proyectos</h3>}
@@ -50,7 +37,7 @@ const Main = () => {
       </div>
       <div
         className={`section-title contact ${sectionOpacity}${thunderMove}`}
-        onClick={() => openContact()}
+        onClick={() => (sound ? (openContact(), playPop()) : openContact())}
       >
         {language === "english" && <h3>Contact</h3>}
         {language === "spanish" && <h3>Contacto</h3>}
@@ -58,7 +45,9 @@ const Main = () => {
       </div>
       <div
         className={`section-title connection ${sectionOpacity}${thunderMove}`}
-        onClick={() => openConnection()}
+        onClick={() =>
+          sound ? (openConnection(), playPop()) : openConnection()
+        }
       >
         {language === "english" && <h3>Connect with me</h3>}
         {language === "spanish" && <h3>Conectate conmigo</h3>}
