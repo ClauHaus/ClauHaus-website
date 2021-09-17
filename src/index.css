@@ -740,7 +740,7 @@ li {
   }
 }
 
-@media screen and (max-width: 800px) {
+/* @media screen and (max-width: 800px) {
   .main-title {
     font-size: 2.9vw;
     width: 27vw;
@@ -755,7 +755,7 @@ li {
     width: 4rem;
     font-size: 12px;
   }
-}
+} */
 
 /*--------------------INTRO----------------------------*/
 
@@ -824,6 +824,11 @@ li {
     /* -webkit-transform: scale(1); */
     transform: scale(1);
   }
+}
+
+.title-information {
+  display: flex;
+  flex-direction: row;
 }
 
 /*----------DASHBOARD---------*/
@@ -1122,7 +1127,7 @@ article.nextSlide {
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
   border-radius: 20px;
-  height: 70vh;
+  min-height: 70vh;
   position: absolute;
   top: 15vh;
   left: 10vw;
@@ -1291,7 +1296,7 @@ article.nextSlide {
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
   border-radius: 20px;
-  height: 70vh;
+  min-height: 70vh;
   position: absolute;
   top: 20vh;
   right: 10vw;
@@ -1403,7 +1408,7 @@ article.nextSlide {
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
   border-radius: 20px;
-  height: 70vh;
+  min-height: 70vh;
   position: absolute;
   top: 15vh;
   left: 20vw;
@@ -1496,7 +1501,7 @@ article.nextSlide {
   /* margin-top: 20px; */
   /* margin-bottom: 20px; */
   border-radius: 20px;
-  height: 40vh;
+  min-height: 40vh;
   position: absolute;
   top: 45vh;
   left: 25vw;
@@ -1688,7 +1693,7 @@ article.nextSlide {
   }
   .section-about {
     width: 75%;
-    height: 70vh;
+    min-height: 70vh;
   }
 
   .about-image {
@@ -1707,7 +1712,7 @@ article.nextSlide {
   .section-projects {
     top: 15vh;
     width: 75%;
-    /* height: 85vh; */
+    min-height: 85vh;
   }
 
   .projects-text {
@@ -1762,7 +1767,7 @@ article.nextSlide {
 
   .section-about {
     top: 9vh;
-    height: 82vh;
+    min-height: 85vh;
   }
 }
 
@@ -1773,8 +1778,8 @@ article.nextSlide {
   }
 
   .section-about {
-    top: 9vh;
-    height: 80vh;
+    top: 7vh;
+    min-height: 88vh;
   }
 }
 
@@ -1808,7 +1813,7 @@ article.nextSlide {
     top: 2px;
     left: 5vw;
     width: 90%;
-    height: 90vh;
+    min-height: 90vh;
   }
 
   .header-subtitle {
@@ -1856,7 +1861,7 @@ article.nextSlide {
     top: 2px;
     left: 5vw;
     width: 90%;
-    height: 85vh;
+    min-height: 85vh;
   }
 
   .projects-article {
@@ -1933,7 +1938,7 @@ article.nextSlide {
 
   .section-about {
     width: 95%;
-    height: 80vh;
+    min-height: 80vh;
     top: 1vh;
     left: 2.5vw;
   }
@@ -1973,7 +1978,7 @@ article.nextSlide {
     top: 1vh;
     left: 5vw;
     width: 90%;
-    height: 78vh;
+    min-height: 78vh;
   }
 
   .link-container {
