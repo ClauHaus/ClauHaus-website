@@ -1715,7 +1715,7 @@ article.nextSlide {
   .section-projects {
     top: 15vh;
     width: 75%;
-    min-height: 85vh;
+    min-height: 75vh;
   }
 
   .projects-text {
@@ -1724,14 +1724,14 @@ article.nextSlide {
 
   .section-contact {
     width: 80%;
-    height: 80vh;
+    min-height: 80vh;
     top: 7vh;
     left: 10vw;
   }
 
   .section-connection {
     width: 75%;
-    height: 50vh;
+    min-height: 40vh;
     top: 35vh;
     left: 15vw;
   }
@@ -1893,7 +1893,7 @@ article.nextSlide {
     width: 90%;
     top: 7vh;
     left: 5vw;
-    height: 70vh;
+    min-height: 70vh;
   }
 
   .form-items {
@@ -1946,6 +1946,10 @@ article.nextSlide {
     min-height: 80vh;
     top: 1vh;
     left: 2.5vw;
+  }
+
+  .breaker-down {
+    position: unset;
   }
 
   .about-image {
@@ -2010,7 +2014,7 @@ article.nextSlide {
     width: 90%;
     top: 1vh;
     left: 5vw;
-    height: 80vh;
+    min-height: 80vh;
   }
 
   .social-text {
