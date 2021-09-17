@@ -76,7 +76,7 @@ const Contact = () => {
                   <input
                     className="form-items"
                     type="text"
-                    name="fullName"
+                    name="name"
                     // value={formInformation.fullName}
                     // onChange={handleChange}
                     id="fullName"
