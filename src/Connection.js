@@ -100,7 +100,9 @@ const Connection = () => {
               <h3 className="header-subtitle">Conectate conmigo</h3>
               <button
                 className="btn-close-right"
-                onClick={() => closeConnection()}
+                onClick={() =>
+                  sound ? (closeConnection(), playClose()) : closeConnection()
+                }
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
@@ -168,7 +170,9 @@ const Connection = () => {
               <h3 className="header-subtitle">verbinde dich mit mir</h3>
               <button
                 className="btn-close-right"
-                onClick={() => closeConnection()}
+                onClick={() =>
+                  sound ? (closeConnection(), playClose()) : closeConnection()
+                }
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
