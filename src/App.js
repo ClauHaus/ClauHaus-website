@@ -1,16 +1,17 @@
 import "./App.css";
 import { useGlobalContext } from "./context";
-import Bolt from "./Bolt";
-import Languages from "./Languages";
-import Header from "./Header";
-import About from "./About";
-import Projects from "./Projects";
-import Contact from "./Contact";
-import Connection from "./Connection";
-import Dashboard from "./Dashboard";
-import Main from "./Main";
-import Sidebar from "./Sidebar";
-import Footer from "./Footer";
+import {
+  //COMPONENTS
+  Bolt,
+  About,
+  Projects,
+  Contact,
+  Connection,
+  Dashboard,
+  Main,
+  Sidebar,
+  Footer,
+} from "./index";
 
 function App() {
   const { intro, website, about, projects, contact, connection, thunderMove } =

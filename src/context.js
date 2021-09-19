@@ -33,7 +33,7 @@ const AppProvider = ({ children }) => {
 
   useEffect(() => {
     document.documentElement.className = theme;
-  }, [theme]); //IMPORTANTE
+  }, [theme]); //IMPORTANTE!
 
   const startWeb = () => {
     setIntro(false);

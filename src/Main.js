@@ -1,7 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "./context";
-import useSound from "use-sound";
-import pop from "./sounds/pop.mp3";
+import { useSound, pop } from "./index";
 
 const Main = () => {
   const {
@@ -17,11 +16,16 @@ const Main = () => {
 
   const [playPop] = useSound(pop, { volume: 0.5 });
 
+  const openSound = (action) => {
+    action();
+    playPop();
+  };
+
   return (
     <section className="main">
       <div
         className={`section-title about ${sectionOpacity}${thunderMove}`}
-        onClick={() => (sound ? (openAbout(), playPop()) : openAbout())}
+        onClick={() => (sound ? openSound(openAbout) : openAbout())}
       >
         {language === "english" && <h3>About me</h3>}
         {language === "spanish" && <h3>Acerca de mí</h3>}
@@ -29,7 +33,7 @@ const Main = () => {
       </div>
       <div
         className={`section-title projects ${sectionOpacity}${thunderMove}`}
-        onClick={() => (sound ? (openProjects(), playPop()) : openProjects())}
+        onClick={() => (sound ? openSound(openProjects) : openProjects())}
       >
         {language === "english" && <h3>Projects</h3>}
         {language === "spanish" && <h3>Proyectos</h3>}
@@ -37,7 +41,7 @@ const Main = () => {
       </div>
       <div
         className={`section-title contact ${sectionOpacity}${thunderMove}`}
-        onClick={() => (sound ? (openContact(), playPop()) : openContact())}
+        onClick={() => (sound ? openSound(openContact) : openContact())}
       >
         {language === "english" && <h3>Contact</h3>}
         {language === "spanish" && <h3>Contacto</h3>}
@@ -45,9 +49,7 @@ const Main = () => {
       </div>
       <div
         className={`section-title connection ${sectionOpacity}${thunderMove}`}
-        onClick={() =>
-          sound ? (openConnection(), playPop()) : openConnection()
-        }
+        onClick={() => (sound ? openSound(openConnection) : openConnection())}
       >
         {language === "english" && <h3>Connect with me</h3>}
         {language === "spanish" && <h3>Conectate conmigo</h3>}

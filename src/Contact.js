@@ -1,12 +1,9 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "./context";
-import useSound from "use-sound";
-import close from "./sounds/close.mp3";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
-import axios from "axios";
+import { useSound, close, FontAwesomeIcon, faTimes } from "./index";
+// import axios from "axios";
 
-const API_PATH = "http://localhost:3000/clauhaus/api/index.php";
+// const API_PATH = "http://localhost:3000/clauhaus/api/index.php";
 
 const Contact = () => {
   const { language, closeContact, closingContact, sound } = useGlobalContext();
@@ -25,25 +22,30 @@ const Contact = () => {
     setFormInformation({ ...formInformation, [name]: value });
   };
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    // axios({
-    //   method: "post",
-    //   url: `${API_PATH}`,
-    //   headers: { "content-type": "application/json" },
-    //   // data: this.state,
-    //   data: formInformation,
-    // })
-    //   .then((result) => {
-    //     // this.setState
-    //     formInformation({
-    //       mailSent: result.data.sent,
-    //     });
-    //   })
-    //   .catch((error) => formInformation.error);
-  };
+  // const handleFormSubmit = (e) => {
+  //   e.preventDefault();
+  //   axios({
+  //     method: "post",
+  //     url: `${API_PATH}`,
+  //     headers: { "content-type": "application/json" },
+  //     // data: this.state,
+  //     data: formInformation,
+  //   })
+  //     .then((result) => {
+  //       // this.setState
+  //       formInformation({
+  //         mailSent: result.data.sent,
+  //       });
+  //     })
+  //     .catch((error) => formInformation.error);
+  // };
 
   const [playClose] = useSound(close, { volume: 0.5 });
+
+  const closeSound = () => {
+    closeContact();
+    playClose();
+  };
 
   return (
     <>
@@ -54,9 +56,7 @@ const Contact = () => {
               <h3 className="header-subtitle">Contact</h3>
               <button
                 className="btn-close-left"
-                onClick={() =>
-                  sound ? (closeContact(), playClose()) : closeContact()
-                }
+                onClick={() => (sound ? closeSound() : closeContact())}
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
@@ -117,9 +117,7 @@ const Contact = () => {
               <h3 className="header-subtitle">Contacto</h3>
               <button
                 className="btn-close-left"
-                onClick={() =>
-                  sound ? (closeContact(), playClose()) : closeContact()
-                }
+                onClick={() => (sound ? closeSound() : closeContact())}
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
@@ -184,9 +182,7 @@ const Contact = () => {
               <h3 className="header-subtitle">Kontakt</h3>
               <button
                 className="btn-close-left"
-                onClick={() =>
-                  sound ? (closeContact(), playClose()) : closeContact()
-                }
+                onClick={() => (sound ? closeSound() : closeContact())}
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>

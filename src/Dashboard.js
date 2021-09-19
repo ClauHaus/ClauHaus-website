@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { useGlobalContext } from "./context";
-import useSound from "use-sound";
-import pop from "./sounds/pop.mp3";
-import themeSound from "./sounds/themeSound.mp3";
-import clickLanguages from "./sounds/clickLanguages.mp3";
-import thunder from "./sounds/thunder.mp3";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  //HOOKS
+  useSound,
+  //SOUNDS
+  pop,
+  themeSound,
+  clickLanguages,
+  thunder,
+  //ICONS
+  FontAwesomeIcon,
   faBars,
   faBolt,
   faSun,
   faMoon,
   faVolumeUp,
   faVolumeMute,
-} from "@fortawesome/free-solid-svg-icons";
+} from "./index";
 
 const Dashboard = () => {
   const {
@@ -76,6 +79,16 @@ const Dashboard = () => {
     }
   };
 
+  const thunderSound = () => {
+    applyThunder();
+    playThunder();
+  };
+
+  const languageSound = (e) => {
+    setLanguage(e.target.value);
+    playLanguages();
+  };
+
   return (
     <section>
       <div className="title-container">
@@ -83,9 +96,7 @@ const Dashboard = () => {
           <h3 className={`dashboard-title ${thunderMove}`}>ClauHaus</h3>
           <button
             className={`bolt-dashboard ${thunderOpacity}`}
-            onClick={() =>
-              sound ? (applyThunder(), playThunder()) : applyThunder()
-            }
+            onClick={() => (sound ? thunderSound() : applyThunder())}
           >
             <FontAwesomeIcon icon={faBolt} />
           </button>
@@ -96,9 +107,7 @@ const Dashboard = () => {
               className={`btn-top ${english} ${thunderOpacity}`}
               value="english"
               onClick={(e) =>
-                sound
-                  ? (setLanguage(e.target.value), playLanguages())
-                  : setLanguage(e.target.value)
+                sound ? languageSound(e) : setLanguage(e.target.value)
               }
             >
               English
@@ -107,9 +116,7 @@ const Dashboard = () => {
               className={`btn-top ${spanish} ${thunderOpacity}`}
               value="spanish"
               onClick={(e) =>
-                sound
-                  ? (setLanguage(e.target.value), playLanguages())
-                  : setLanguage(e.target.value)
+                sound ? languageSound(e) : setLanguage(e.target.value)
               }
             >
               Spanish
@@ -118,9 +125,7 @@ const Dashboard = () => {
               className={`btn-top ${german} ${thunderOpacity}`}
               value="german"
               onClick={(e) =>
-                sound
-                  ? (setLanguage(e.target.value), playLanguages())
-                  : setLanguage(e.target.value)
+                sound ? languageSound(e) : setLanguage(e.target.value)
               }
             >
               German
@@ -133,9 +138,7 @@ const Dashboard = () => {
               className={`btn-top ${english} ${thunderOpacity}`}
               value="english"
               onClick={(e) =>
-                sound
-                  ? (setLanguage(e.target.value), playLanguages())
-                  : setLanguage(e.target.value)
+                sound ? languageSound(e) : setLanguage(e.target.value)
               }
             >
               Inglés
@@ -144,9 +147,7 @@ const Dashboard = () => {
               className={`btn-top ${spanish} ${thunderOpacity}`}
               value="spanish"
               onClick={(e) =>
-                sound
-                  ? (setLanguage(e.target.value), playLanguages())
-                  : setLanguage(e.target.value)
+                sound ? languageSound(e) : setLanguage(e.target.value)
               }
             >
               Español
@@ -155,9 +156,7 @@ const Dashboard = () => {
               className={`btn-top ${german} ${thunderOpacity}`}
               value="german"
               onClick={(e) =>
-                sound
-                  ? (setLanguage(e.target.value), playLanguages())
-                  : setLanguage(e.target.value)
+                sound ? languageSound(e) : setLanguage(e.target.value)
               }
             >
               Alemán
@@ -170,9 +169,7 @@ const Dashboard = () => {
               className={`btn-top ${english} ${thunderOpacity}`}
               value="english"
               onClick={(e) =>
-                sound
-                  ? (setLanguage(e.target.value), playLanguages())
-                  : setLanguage(e.target.value)
+                sound ? languageSound(e) : setLanguage(e.target.value)
               }
             >
               Englisch
@@ -181,9 +178,7 @@ const Dashboard = () => {
               className={`btn-top ${spanish} ${thunderOpacity}`}
               value="spanish"
               onClick={(e) =>
-                sound
-                  ? (setLanguage(e.target.value), playLanguages())
-                  : setLanguage(e.target.value)
+                sound ? languageSound(e) : setLanguage(e.target.value)
               }
             >
               Spanisch
@@ -192,9 +187,7 @@ const Dashboard = () => {
               className={`btn-top ${german} ${thunderOpacity}`}
               value="german"
               onClick={(e) =>
-                sound
-                  ? (setLanguage(e.target.value), playLanguages())
-                  : setLanguage(e.target.value)
+                sound ? languageSound(e) : setLanguage(e.target.value)
               }
             >
               Deutsch

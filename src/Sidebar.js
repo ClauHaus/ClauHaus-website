@@ -1,19 +1,22 @@
 import React, { useState, useEffect } from "react";
 import { useGlobalContext } from "./context";
-import useSound from "use-sound";
-import pop from "./sounds/pop.mp3";
-import themeSound from "./sounds/themeSound.mp3";
-import clickLanguages from "./sounds/clickLanguages.mp3";
-import thunder from "./sounds/thunder.mp3";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  //HOOKS
+  useSound,
+  //SOUNDS
+  pop,
+  themeSound,
+  clickLanguages,
+  thunder,
+  //ICONS
+  FontAwesomeIcon,
   faBolt,
   faTimes,
   faSun,
   faMoon,
   faVolumeUp,
   faVolumeMute,
-} from "@fortawesome/free-solid-svg-icons";
+} from "./index";
 
 const Sidebar = () => {
   const {
@@ -27,7 +30,6 @@ const Sidebar = () => {
     setSound,
     applyThunder,
     thunderOpacity,
-    thunderMove,
     thunderOpacitySidebar,
   } = useGlobalContext();
 
@@ -78,6 +80,16 @@ const Sidebar = () => {
     }
   };
 
+  const thunderSound = () => {
+    applyThunder();
+    playThunder();
+  };
+
+  const languageSound = (e) => {
+    setLanguage(e.target.value);
+    playLanguages();
+  };
+
   return (
     //Revisar esta classname
     <section className={`sidebar ${sideBar} ${thunderOpacitySidebar}`}>
@@ -88,9 +100,7 @@ const Sidebar = () => {
           </h3>
           <button
             className={`bolt-dashboard ${thunderOpacity}`}
-            onClick={() =>
-              sound ? (applyThunder(), playThunder()) : applyThunder()
-            }
+            onClick={() => (sound ? thunderSound() : applyThunder())}
           >
             <FontAwesomeIcon icon={faBolt} />
           </button>
@@ -113,9 +123,7 @@ const Sidebar = () => {
                 className={`sidebar-btn-top ${english} ${thunderOpacitySidebar}`}
                 value="english"
                 onClick={(e) =>
-                  sound
-                    ? (setLanguage(e.target.value), playLanguages())
-                    : setLanguage(e.target.value)
+                  sound ? languageSound(e) : setLanguage(e.target.value)
                 }
               >
                 English
@@ -126,9 +134,7 @@ const Sidebar = () => {
                 className={`sidebar-btn-top ${spanish} ${thunderOpacitySidebar}`}
                 value="spanish"
                 onClick={(e) =>
-                  sound
-                    ? (setLanguage(e.target.value), playLanguages())
-                    : setLanguage(e.target.value)
+                  sound ? languageSound(e) : setLanguage(e.target.value)
                 }
               >
                 Spanish
@@ -139,9 +145,7 @@ const Sidebar = () => {
                 className={`sidebar-btn-top ${german}${thunderOpacitySidebar}`}
                 value="german"
                 onClick={(e) =>
-                  sound
-                    ? (setLanguage(e.target.value), playLanguages())
-                    : setLanguage(e.target.value)
+                  sound ? languageSound(e) : setLanguage(e.target.value)
                 }
               >
                 German
@@ -156,9 +160,7 @@ const Sidebar = () => {
                 className={`sidebar-btn-top ${english}${thunderOpacitySidebar}`}
                 value="english"
                 onClick={(e) =>
-                  sound
-                    ? (setLanguage(e.target.value), playLanguages())
-                    : setLanguage(e.target.value)
+                  sound ? languageSound(e) : setLanguage(e.target.value)
                 }
               >
                 Inglés
@@ -169,9 +171,7 @@ const Sidebar = () => {
                 className={`sidebar-btn-top ${spanish} ${thunderOpacitySidebar}`}
                 value="spanish"
                 onClick={(e) =>
-                  sound
-                    ? (setLanguage(e.target.value), playLanguages())
-                    : setLanguage(e.target.value)
+                  sound ? languageSound(e) : setLanguage(e.target.value)
                 }
               >
                 Español
@@ -182,9 +182,7 @@ const Sidebar = () => {
                 className={`sidebar-btn-top ${german}${thunderOpacitySidebar}`}
                 value="german"
                 onClick={(e) =>
-                  sound
-                    ? (setLanguage(e.target.value), playLanguages())
-                    : setLanguage(e.target.value)
+                  sound ? languageSound(e) : setLanguage(e.target.value)
                 }
               >
                 Alemán
@@ -199,9 +197,7 @@ const Sidebar = () => {
                 className={`sidebar-btn-top ${english}${thunderOpacitySidebar}`}
                 value="english"
                 onClick={(e) =>
-                  sound
-                    ? (setLanguage(e.target.value), playLanguages())
-                    : setLanguage(e.target.value)
+                  sound ? languageSound(e) : setLanguage(e.target.value)
                 }
               >
                 Englisch
@@ -212,9 +208,7 @@ const Sidebar = () => {
                 className={`sidebar-btn-top ${spanish} ${thunderOpacitySidebar}`}
                 value="spanish"
                 onClick={(e) =>
-                  sound
-                    ? (setLanguage(e.target.value), playLanguages())
-                    : setLanguage(e.target.value)
+                  sound ? languageSound(e) : setLanguage(e.target.value)
                 }
               >
                 Spanisch
@@ -225,9 +219,7 @@ const Sidebar = () => {
                 className={`sidebar-btn-top ${german} ${thunderOpacitySidebar}`}
                 value="german"
                 onClick={(e) =>
-                  sound
-                    ? (setLanguage(e.target.value), playLanguages())
-                    : setLanguage(e.target.value)
+                  sound ? languageSound(e) : setLanguage(e.target.value)
                 }
               >
                 Deutsch

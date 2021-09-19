@@ -1,22 +1,23 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "./context";
-import useSound from "use-sound";
-import close from "./sounds/close.mp3";
-import clickLanguages from "./sounds/clickLanguages.mp3";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
+  //HOOKS
+  useSound,
+  //SOUNDS
+  close,
+  clickLanguages,
+  //ARRAYS
+  dataProjectsEn,
+  dataProjectsSp,
+  dataProjectsDe,
+  //ICONS
+  FontAwesomeIcon,
   faChevronLeft,
   faChevronRight,
   faLink,
   faTimes,
-} from "@fortawesome/free-solid-svg-icons";
-
-import {
-  dataProjectsEn,
-  dataProjectsSp,
-  dataProjectsDe,
-} from "./utils/dataProjects";
+  faGithub,
+} from "./index";
 
 const Projects = () => {
   const { language, closingProjects, closeProjects, sound } =
@@ -54,6 +55,21 @@ const Projects = () => {
   const [playClose] = useSound(close, { volume: 0.5 });
   const [playLanguages] = useSound(clickLanguages, { volume: 0.5 });
 
+  const closeSound = () => {
+    closeProjects();
+    playClose();
+  };
+
+  const prevSound = () => {
+    prevPage();
+    playLanguages();
+  };
+
+  const nextSound = () => {
+    nextPage();
+    playLanguages();
+  };
+
   return (
     <>
       <section id="projects" className={`section-projects ${closingProjects}`}>
@@ -69,9 +85,7 @@ const Projects = () => {
           )}
           <button
             className="btn-close-right"
-            onClick={() =>
-              sound ? (closeProjects(), playClose()) : closeProjects()
-            }
+            onClick={() => (sound ? closeSound() : closeProjects())}
           >
             <FontAwesomeIcon icon={faTimes} />
           </button>
@@ -113,17 +127,13 @@ const Projects = () => {
                   <div className="breaker-down">
                     <button
                       className="chevron-style"
-                      onClick={() =>
-                        sound ? (prevPage(), playLanguages()) : prevPage()
-                      }
+                      onClick={() => (sound ? prevSound() : prevPage())}
                     >
                       <FontAwesomeIcon icon={faChevronLeft} />
                     </button>
                     <button
                       className="chevron-style"
-                      onClick={() =>
-                        sound ? (nextPage(), playLanguages()) : nextPage()
-                      }
+                      onClick={() => (sound ? nextSound() : nextPage())}
                     >
                       <FontAwesomeIcon icon={faChevronRight} />
                     </button>
@@ -166,17 +176,13 @@ const Projects = () => {
                   <div className="breaker-down">
                     <button
                       className="chevron-style"
-                      onClick={() =>
-                        sound ? (prevPage(), playLanguages()) : prevPage()
-                      }
+                      onClick={() => (sound ? prevSound() : prevPage())}
                     >
                       <FontAwesomeIcon icon={faChevronLeft} />
                     </button>
                     <button
                       className="chevron-style"
-                      onClick={() =>
-                        sound ? (nextPage(), playLanguages()) : nextPage()
-                      }
+                      onClick={() => (sound ? nextSound() : nextPage())}
                     >
                       <FontAwesomeIcon icon={faChevronRight} />
                     </button>
@@ -219,17 +225,13 @@ const Projects = () => {
                   <div className="breaker-down">
                     <button
                       className="chevron-style"
-                      onClick={() =>
-                        sound ? (prevPage(), playLanguages()) : prevPage()
-                      }
+                      onClick={() => (sound ? prevSound() : prevPage())}
                     >
                       <FontAwesomeIcon icon={faChevronLeft} />
                     </button>
                     <button
                       className="chevron-style"
-                      onClick={() =>
-                        sound ? (nextPage(), playLanguages()) : nextPage()
-                      }
+                      onClick={() => (sound ? nextSound() : nextPage())}
                     >
                       <FontAwesomeIcon icon={faChevronRight} />
                     </button>

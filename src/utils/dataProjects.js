@@ -1,6 +1,7 @@
 import askaway from "../images/askaway.png";
 import odyssey from "../images/odyssey.png";
 import memory from "../images/memory.png";
+import website from "../images/website.png";
 
 export const dataProjectsEn = [
   {
@@ -26,6 +27,14 @@ export const dataProjectsEn = [
     text: "Project made in JavaScript, Memory is a card game, quite basic but hard to beat. It has several outcomes depending on the performance of the player, and it's presented in three different languages.",
     link: "https://memorygame-app.netlify.app/",
     repository: "https://github.com/ClauHaus/MEMORY",
+  },
+  {
+    id: 3,
+    image: `${website}`,
+    title: "ClauHaus",
+    text: "Project made in React. These website is meant to work as a resume, showing some of my information as well the projects that I already made. If you liked it you can get the code just clicking in the `repository`.",
+    link: "https://clauhaus.netlify.app/",
+    repository: "https://github.com/ClauHaus/ClauHaus",
   },
 ];
 
@@ -54,6 +63,14 @@ export const dataProjectsSp = [
     link: "https://memorygame-app.netlify.app/",
     repository: "https://github.com/ClauHaus/MEMORY",
   },
+  {
+    id: 3,
+    image: `${website}`,
+    title: "ClauHaus",
+    text: "Proyecto realizado en React. Esta web tiene como finalidad mostrar un poco de mi información como los projectos que he hecho. Si te ha gustado puedes descargar el código clickeando en el `repositorio`.",
+    link: "https://clauhaus.netlify.app/",
+    repository: "https://github.com/ClauHaus/ClauHaus",
+  },
 ];
 
 export const dataProjectsDe = [
@@ -80,5 +97,13 @@ export const dataProjectsDe = [
     text: "Das in JavaScript erstellte, Memory ist ein Kartenspiel, recht einfach but schwer zu schlagen. Es hat verschiedene Ergebnisse, abhängig von der Leistung des Spielers, und es wird in drei verschiedenen Sprachen präsentiert.",
     link: "https://memorygame-app.netlify.app/",
     repository: "https://github.com/ClauHaus/MEMORY",
+  },
+  {
+    id: 3,
+    image: `${website}`,
+    title: "ClauHaus",
+    text: "Projekt in React erstellt. Diese Website soll als Lebenslauf dienen und einige meiner Informationen sowie die Projekte zeigen, die ich bereits gemacht habe. Wenn es Ihnen gefallen hat, kannst du den Code mit einem Klick in das `Repository` erhalten.",
+    link: "https://clauhaus.netlify.app/",
+    repository: "https://github.com/ClauHaus/ClauHaus",
   },
 ];

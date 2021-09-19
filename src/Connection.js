@@ -1,23 +1,31 @@
 import React from "react";
 import { useGlobalContext } from "./context";
-import useSound from "use-sound";
-import close from "./sounds/close.mp3";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
+  //HOOKS
+  useSound,
+  //SOUNDS
+  close,
+  //ICONS
+  FontAwesomeIcon,
   faFacebook,
   faTwitter,
   faInstagram,
   faLinkedin,
   faGithub,
   faCodepen,
-} from "@fortawesome/free-brands-svg-icons";
-import { faTimes } from "@fortawesome/free-solid-svg-icons";
+  faTimes,
+} from "./index";
 
 const Connection = () => {
   const { language, closeConnection, closingConnection, sound } =
     useGlobalContext();
 
   const [playClose] = useSound(close, { volume: 0.5 });
+
+  const closeSound = () => {
+    closeConnection();
+    playClose();
+  };
   return (
     <>
       <section
@@ -30,9 +38,7 @@ const Connection = () => {
               <h3 className="header-subtitle">Connect with me</h3>
               <button
                 className="btn-close-right"
-                onClick={() =>
-                  sound ? (closeConnection(), playClose()) : closeConnection()
-                }
+                onClick={() => (sound ? closeSound() : closeConnection())}
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
@@ -100,9 +106,7 @@ const Connection = () => {
               <h3 className="header-subtitle">Conectate conmigo</h3>
               <button
                 className="btn-close-right"
-                onClick={() =>
-                  sound ? (closeConnection(), playClose()) : closeConnection()
-                }
+                onClick={() => (sound ? closeSound() : closeConnection())}
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>
@@ -170,9 +174,7 @@ const Connection = () => {
               <h3 className="header-subtitle">verbinde dich mit mir</h3>
               <button
                 className="btn-close-right"
-                onClick={() =>
-                  sound ? (closeConnection(), playClose()) : closeConnection()
-                }
+                onClick={() => (sound ? closeSound() : closeConnection())}
               >
                 <FontAwesomeIcon icon={faTimes} />
               </button>

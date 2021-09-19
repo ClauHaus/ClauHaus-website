@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useGlobalContext } from "./context";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBolt } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon, faBolt } from "./index";
 
 const Bolt = () => {
   const { startWeb } = useGlobalContext();
