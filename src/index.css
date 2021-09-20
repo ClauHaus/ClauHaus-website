@@ -1510,17 +1510,11 @@ article.nextSlide {
   }
 
   .section-about {
-    width: 100%;
+    width: 98%;
     min-height: 85vh;
     top: 1vh;
-    left: 0vw;
-    /* border-radius: 0px; */
+    left: 1vw;
   }
-
-  /* .breaker-down {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
-  } */
 
   .header-subtitle {
     font-size: 5vw;
@@ -1655,10 +1649,10 @@ article.nextSlide {
   }
 
   .section-about {
-    width: 100%;
+    width: 99%;
     min-height: 85vh;
     top: 1vh;
-    left: 0vw;
+    left: 1vw;
   }
 
   .about-image {
@@ -1667,7 +1661,7 @@ article.nextSlide {
 
   .about-text {
     text-align: justify;
-    font-size: 4.5vw;
+    font-size: 5vw;
   }
 
   .skills-container {
