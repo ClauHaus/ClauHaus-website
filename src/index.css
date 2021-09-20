@@ -1508,6 +1508,7 @@ article.nextSlide {
   h3 {
     font-size: 16px;
   }
+
   .section-about {
     top: 0px;
     left: 0px;
@@ -1520,6 +1521,7 @@ article.nextSlide {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
   }
+
   .header-subtitle {
     font-size: 5vw;
   }
@@ -1618,9 +1620,6 @@ article.nextSlide {
   .footer-hide {
     display: none;
   }
-  .peperina {
-    background: red;
-  }
 }
 
 /*------MEDIA QUERIES 375px--------*/
@@ -1656,10 +1655,16 @@ article.nextSlide {
   }
 
   .section-about {
-    width: 95%;
-    min-height: 85vh;
-    top: 1vh;
-    left: 2.5vw;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0px;
+  }
+
+  .breaker-down {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
   }
 
   .about-image {
