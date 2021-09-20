@@ -1510,17 +1510,17 @@ article.nextSlide {
   }
 
   .section-about {
-    top: 0px;
-    left: 0px;
     width: 100%;
-    min-height: 100vh;
-    border-radius: 0px;
+    min-height: 85vh;
+    top: 1vh;
+    left: 0vw;
+    /* border-radius: 0px; */
   }
 
-  .breaker-down {
+  /* .breaker-down {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
-  }
+  } */
 
   .header-subtitle {
     font-size: 5vw;
@@ -1655,16 +1655,10 @@ article.nextSlide {
   }
 
   .section-about {
-    top: 0px;
-    left: 0px;
     width: 100%;
-    min-height: 100vh;
-    border-radius: 0px;
-  }
-
-  .breaker-down {
-    border-bottom-left-radius: 0px;
-    border-bottom-right-radius: 0px;
+    min-height: 85vh;
+    top: 1vh;
+    left: 0vw;
   }
 
   .about-image {
