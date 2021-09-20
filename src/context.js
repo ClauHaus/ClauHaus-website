@@ -18,6 +18,7 @@ const AppProvider = ({ children }) => {
   const [thunderMove, setThunderMove] = useState("");
   const [thunderOpacity, setThunderOpacity] = useState("");
   const [thunderOpacitySidebar, setThunderOpacitySidebar] = useState("");
+  const [footer, setFooter] = useState("");
 
   const selectedLanguage = localStorage.getItem("newLanguage");
   const selectedTheme = localStorage.getItem("newTheme");
@@ -129,6 +130,7 @@ const AppProvider = ({ children }) => {
         thunderMove,
         thunderOpacity,
         thunderOpacitySidebar,
+        footer,
         setLanguage,
         setTheme,
         setSound,
@@ -147,6 +149,7 @@ const AppProvider = ({ children }) => {
         openConnection,
         closeConnection,
         applyThunder,
+        setFooter,
       }}
     >
       {children}

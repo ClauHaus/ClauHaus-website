@@ -6,7 +6,8 @@ import { useSound, close, FontAwesomeIcon, faTimes } from "./index";
 // const API_PATH = "http://localhost:3000/clauhaus/api/index.php";
 
 const Contact = () => {
-  const { language, closeContact, closingContact, sound } = useGlobalContext();
+  const { language, closeContact, closingContact, sound, setFooter } =
+    useGlobalContext();
 
   const [formInformation, setFormInformation] = useState({
     fullName: "",
@@ -45,6 +46,7 @@ const Contact = () => {
   const closeSound = () => {
     closeContact();
     playClose();
+    setFooter("");
   };
 
   return (

@@ -12,12 +12,14 @@ const Main = () => {
     sectionOpacity,
     thunderMove,
     sound,
+    setFooter,
   } = useGlobalContext();
 
   const [playPop] = useSound(pop, { volume: 0.5 });
 
   const openSound = (action) => {
     action();
+    setFooter("footer-hide");
     playPop();
   };
 

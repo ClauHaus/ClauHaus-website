@@ -1509,12 +1509,17 @@ article.nextSlide {
     font-size: 16px;
   }
   .section-about {
-    top: 2px;
-    left: 5vw;
-    width: 90%;
-    min-height: 90vh;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    min-height: 100vh;
+    border-radius: 0px;
   }
 
+  .breaker-down {
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  }
   .header-subtitle {
     font-size: 5vw;
   }
@@ -1608,6 +1613,13 @@ article.nextSlide {
     height: 40vh;
     top: 15vh;
     left: 5vw;
+  }
+
+  .footer-hide {
+    display: none;
+  }
+  .peperina {
+    background: red;
   }
 }
 

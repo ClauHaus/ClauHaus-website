@@ -17,7 +17,7 @@ import {
 } from "./index";
 
 const Connection = () => {
-  const { language, closeConnection, closingConnection, sound } =
+  const { language, closeConnection, closingConnection, sound, setFooter } =
     useGlobalContext();
 
   const [playClose] = useSound(close, { volume: 0.5 });
@@ -25,6 +25,7 @@ const Connection = () => {
   const closeSound = () => {
     closeConnection();
     playClose();
+    setFooter("");
   };
   return (
     <>

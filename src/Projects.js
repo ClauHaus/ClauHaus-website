@@ -20,7 +20,7 @@ import {
 } from "./index";
 
 const Projects = () => {
-  const { language, closingProjects, closeProjects, sound } =
+  const { language, closingProjects, closeProjects, sound, setFooter } =
     useGlobalContext();
 
   const [index, setIndex] = useState(0);
@@ -58,6 +58,7 @@ const Projects = () => {
   const closeSound = () => {
     closeProjects();
     playClose();
+    setFooter("");
   };
 
   const prevSound = () => {
