@@ -1512,7 +1512,7 @@ article.nextSlide {
 
   .clau-mov {
     display: none;
-    margin: 50% auto;
+    margin: 50% 50%;
   }
 
   .clau-mov-show {
