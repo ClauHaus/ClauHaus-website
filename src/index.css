@@ -1512,14 +1512,11 @@ article.nextSlide {
 
   .clau-mov {
     display: none;
-    position: absolute;
-    top: unset;
-    left: unset;
-    margin: auto;
+    margin: 50% auto;
   }
 
   .clau-mov-show {
-    display: block;
+    display: flex;
   }
 
   .clau-mov-sidebar {
