@@ -30,6 +30,7 @@ import askaway from "./images/askaway.png";
 import odyssey from "./images/odyssey.png";
 import memory from "./images/memory.png";
 import website from "./images/website.png";
+import clauMov from "./images/clau-mov.gif";
 //IMPORT SOUNDS
 import clickLanguages from "./sounds/clickLanguages.mp3";
 import close from "./sounds/close.mp3";
@@ -124,6 +125,7 @@ export {
   odyssey,
   memory,
   website,
+  clauMov,
   //EXPORT SOUNDS
   clickLanguages,
   close,

@@ -19,6 +19,8 @@ const AppProvider = ({ children }) => {
   const [thunderOpacity, setThunderOpacity] = useState("");
   const [thunderOpacitySidebar, setThunderOpacitySidebar] = useState("");
   const [footer, setFooter] = useState("");
+  const [clauShow, setClauShow] = useState("");
+  const [clauShowSidebar, setClauShowSidebar] = useState("");
 
   const selectedLanguage = localStorage.getItem("newLanguage");
   const selectedTheme = localStorage.getItem("newTheme");
@@ -101,10 +103,14 @@ const AppProvider = ({ children }) => {
     setThunderMove("thunder-move");
     setThunderOpacity("thunder-opacity");
     setThunderOpacitySidebar("thunder-opacity-sidebar");
+    setClauShow("clau-mov-show");
+    setClauShowSidebar("clau-mov-show-sidebar");
     setTimeout(() => {
       setThunderMove("");
       setThunderOpacity("");
       setThunderOpacitySidebar("");
+      setClauShow("");
+      setClauShowSidebar("");
     }, 3500);
     // return () => clearTimeout(thunderTime);
   };
@@ -131,6 +137,8 @@ const AppProvider = ({ children }) => {
         thunderOpacity,
         thunderOpacitySidebar,
         footer,
+        clauShow,
+        clauShowSidebar,
         setLanguage,
         setTheme,
         setSound,
@@ -150,6 +158,8 @@ const AppProvider = ({ children }) => {
         closeConnection,
         applyThunder,
         setFooter,
+        setClauShow,
+        setClauShowSidebar,
       }}
     >
       {children}

@@ -8,6 +8,8 @@ import {
   themeSound,
   clickLanguages,
   thunder,
+  //IMAGES
+  clauMov,
   //ICONS
   FontAwesomeIcon,
   faBolt,
@@ -31,6 +33,7 @@ const Sidebar = () => {
     applyThunder,
     thunderOpacity,
     thunderOpacitySidebar,
+    clauShowSidebar,
   } = useGlobalContext();
 
   const [spanish, setSpanish] = useState("");
@@ -256,6 +259,13 @@ const Sidebar = () => {
               <FontAwesomeIcon icon={faVolumeMute} />
             )}
           </button>
+        </li>
+        <li>
+          <img
+            src={clauMov}
+            alt=""
+            className={`clau-mov-sidebar ${clauShowSidebar}`}
+          />
         </li>
       </ul>
     </section>

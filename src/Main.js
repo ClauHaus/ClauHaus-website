@@ -1,6 +1,6 @@
 import React from "react";
 import { useGlobalContext } from "./context";
-import { useSound, pop } from "./index";
+import { useSound, pop, clauMov } from "./index";
 
 const Main = () => {
   const {
@@ -12,6 +12,7 @@ const Main = () => {
     sectionOpacity,
     thunderMove,
     sound,
+    clauShow,
     setFooter,
   } = useGlobalContext();
 
@@ -25,6 +26,7 @@ const Main = () => {
 
   return (
     <section className="main">
+      <img src={clauMov} alt="" className={`clau-mov ${clauShow}`} />
       <div
         className={`section-title about ${sectionOpacity}${thunderMove}`}
         onClick={() => (sound ? openSound(openAbout) : openAbout())}
