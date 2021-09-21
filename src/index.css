@@ -808,6 +808,7 @@ article.nextSlide {
   position: absolute;
   top: 1%;
   left: 32%;
+  transition: 0.3s;
 }
 
 .clau-mov-show {
@@ -1529,6 +1530,19 @@ article.nextSlide {
     margin: 10px auto;
   }
 
+  .clau-mov {
+    display: none;
+    position: absolute;
+    top: unset;
+    left: unset;
+    bottom: 12%;
+    right: 20%;
+  }
+
+  .clau-mov-show {
+    display: block;
+  }
+
   .clau-mov-sidebar {
     display: none;
   }
@@ -1536,6 +1550,7 @@ article.nextSlide {
   .clau-mov-show-sidebar {
     display: block;
     margin: 10px auto;
+    transition: 0.3s;
   }
 
   .connection {
