@@ -806,9 +806,9 @@ article.nextSlide {
 .clau-mov {
   display: none;
   position: absolute;
-  top: 1%;
-  left: 32%;
+  margin: auto;
   transition: 0.3s;
+  padding-right: 20px;
 }
 
 .clau-mov-show {
@@ -1393,17 +1393,6 @@ article.nextSlide {
     justify-content: space-around;
   }
 
-  .clau-mov {
-    display: none;
-    position: absolute;
-    top: 1%;
-    left: 5%;
-  }
-
-  .clau-mov-show {
-    display: flex;
-  }
-
   .section-about {
     width: 75%;
     min-height: 70vh;
@@ -1459,16 +1448,7 @@ article.nextSlide {
   h3 {
     font-size: 18px;
   }
-  .clau-mov {
-    display: none;
-    position: absolute;
-    top: 1%;
-    left: 5%;
-  }
 
-  .clau-mov-show {
-    display: none;
-  }
   .about-article {
     flex-direction: column;
   }
@@ -1535,8 +1515,7 @@ article.nextSlide {
     position: absolute;
     top: unset;
     left: unset;
-    bottom: 12%;
-    right: 20%;
+    margin: auto;
   }
 
   .clau-mov-show {
