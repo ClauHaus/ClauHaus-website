@@ -232,6 +232,7 @@ const Dashboard = () => {
           </button>
         </div>
       </div>
+      <div className="breaker-title"></div>
     </section>
   );
 };
