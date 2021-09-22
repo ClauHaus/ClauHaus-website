@@ -17,6 +17,7 @@ const AppProvider = ({ children }) => {
   const [sectionOpacity, setSectionOpacity] = useState("");
   const [thunderMove, setThunderMove] = useState("");
   const [thunderOpacity, setThunderOpacity] = useState("");
+  const [thunderHide, setThunderHide] = useState("");
   const [thunderOpacitySidebar, setThunderOpacitySidebar] = useState("");
   const [footer, setFooter] = useState("");
   const [clauShow, setClauShow] = useState("");
@@ -102,12 +103,14 @@ const AppProvider = ({ children }) => {
   const applyThunder = () => {
     setThunderMove("thunder-move");
     setThunderOpacity("thunder-opacity");
+    setThunderHide("thunder-hide");
     setThunderOpacitySidebar("thunder-opacity-sidebar");
     setClauShow("clau-mov-show");
     setClauShowSidebar("clau-mov-show-sidebar");
     setTimeout(() => {
       setThunderMove("");
       setThunderOpacity("");
+      setThunderHide("");
       setThunderOpacitySidebar("");
       setClauShow("");
       setClauShowSidebar("");
@@ -135,6 +138,7 @@ const AppProvider = ({ children }) => {
         sectionOpacity,
         thunderMove,
         thunderOpacity,
+        thunderHide,
         thunderOpacitySidebar,
         footer,
         clauShow,

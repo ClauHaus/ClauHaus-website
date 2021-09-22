@@ -42,19 +42,19 @@ const Sidebar = () => {
 
   useEffect(() => {
     if (language === "english") {
-      setEnglish("btn-clicked");
+      setEnglish("btn-clicked-sidebar");
       setSpanish("");
       setGerman("");
     }
     if (language === "spanish") {
       setEnglish("");
-      setSpanish("btn-clicked");
+      setSpanish("btn-clicked-sidebar");
       setGerman("");
     }
     if (language === "german") {
       setEnglish("");
       setSpanish("");
-      setGerman("btn-clicked");
+      setGerman("btn-clicked-sidebar");
     }
   }, [language]);
 

@@ -575,6 +575,31 @@ li {
   flex-direction: row;
 }
 
+.boton {
+  font-family: var(--retroSmall);
+  width: 6vw;
+  height: 5vh;
+  font-size: 20px;
+  padding: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
+  color: var(--sectionBackground);
+  background: var(--secondary);
+  border-radius: 5px;
+  box-shadow: 3px 3px 0px 0px var(--primary),
+    3px 3px 0px 1px var(--sectionBackground);
+  border: transparent;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.boton:hover {
+  color: var(--secondary);
+  background: var(--sectionBackground);
+  box-shadow: unset;
+  transform: translateX(3px) translateY(3px);
+}
+
 /*----------DASHBOARD---------*/
 
 .title-container {
@@ -745,6 +770,13 @@ li {
 }
 
 .btn-clicked {
+  color: var(--secondary);
+  background: var(--sectionBackground);
+  box-shadow: unset;
+  transform: translateX(3px) translateY(3px);
+}
+
+.btn-clicked-sidebar {
   border-bottom: 2px solid var(--secondary);
 }
 
@@ -1281,6 +1313,10 @@ article.nextSlide {
   }
 }
 
+.clau-mov-sidebar {
+  display: none;
+}
+
 /*-----------------------FOOTER------------------*/
 
 .footer {
@@ -1298,6 +1334,10 @@ article.nextSlide {
   color: black;
   opacity: 0.8;
   border-bottom: none;
+}
+
+.thunder-hide {
+  display: none;
 }
 
 .thunder-move {
@@ -1512,7 +1552,7 @@ article.nextSlide {
 
   .clau-mov {
     display: none;
-    margin: 60% 40%;
+    margin: unset;
   }
 
   .clau-mov-show {

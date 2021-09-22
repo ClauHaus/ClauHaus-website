@@ -29,6 +29,7 @@ const Dashboard = () => {
     setSound,
     applyThunder,
     thunderOpacity,
+    thunderHide,
     thunderMove,
   } = useGlobalContext();
 
@@ -104,7 +105,7 @@ const Dashboard = () => {
         {language === "english" && (
           <div className="btn-container">
             <button
-              className={`btn-top ${english} ${thunderOpacity}`}
+              className={`boton ${english} ${thunderHide}`}
               value="english"
               onClick={(e) =>
                 sound ? languageSound(e) : setLanguage(e.target.value)
@@ -113,7 +114,7 @@ const Dashboard = () => {
               English
             </button>
             <button
-              className={`btn-top ${spanish} ${thunderOpacity}`}
+              className={`boton ${spanish} ${thunderHide}`}
               value="spanish"
               onClick={(e) =>
                 sound ? languageSound(e) : setLanguage(e.target.value)
@@ -122,7 +123,7 @@ const Dashboard = () => {
               Spanish
             </button>
             <button
-              className={`btn-top ${german} ${thunderOpacity}`}
+              className={`boton ${german} ${thunderHide}`}
               value="german"
               onClick={(e) =>
                 sound ? languageSound(e) : setLanguage(e.target.value)
@@ -135,7 +136,7 @@ const Dashboard = () => {
         {language === "spanish" && (
           <div className="btn-container">
             <button
-              className={`btn-top ${english} ${thunderOpacity}`}
+              className={`boton ${english} ${thunderHide}`}
               value="english"
               onClick={(e) =>
                 sound ? languageSound(e) : setLanguage(e.target.value)
@@ -144,7 +145,7 @@ const Dashboard = () => {
               Inglés
             </button>
             <button
-              className={`btn-top ${spanish} ${thunderOpacity}`}
+              className={`boton ${spanish} ${thunderHide}`}
               value="spanish"
               onClick={(e) =>
                 sound ? languageSound(e) : setLanguage(e.target.value)
@@ -153,7 +154,7 @@ const Dashboard = () => {
               Español
             </button>
             <button
-              className={`btn-top ${german} ${thunderOpacity}`}
+              className={`boton ${german} ${thunderHide}`}
               value="german"
               onClick={(e) =>
                 sound ? languageSound(e) : setLanguage(e.target.value)
@@ -166,7 +167,7 @@ const Dashboard = () => {
         {language === "german" && (
           <div className="btn-container">
             <button
-              className={`btn-top ${english} ${thunderOpacity}`}
+              className={`boton ${english} ${thunderHide}`}
               value="english"
               onClick={(e) =>
                 sound ? languageSound(e) : setLanguage(e.target.value)
@@ -175,7 +176,7 @@ const Dashboard = () => {
               Englisch
             </button>
             <button
-              className={`btn-top ${spanish} ${thunderOpacity}`}
+              className={`boton ${spanish} ${thunderHide}`}
               value="spanish"
               onClick={(e) =>
                 sound ? languageSound(e) : setLanguage(e.target.value)
@@ -184,7 +185,7 @@ const Dashboard = () => {
               Spanisch
             </button>
             <button
-              className={`btn-top ${german} ${thunderOpacity}`}
+              className={`boton ${german} ${thunderHide}`}
               value="german"
               onClick={(e) =>
                 sound ? languageSound(e) : setLanguage(e.target.value)
