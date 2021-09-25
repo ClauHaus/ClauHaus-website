@@ -41,13 +41,13 @@ const Contact = () => {
   //     .catch((error) => formInformation.error);
   // };
 
-  const [playClose] = useSound(close, { volume: 0.5 });
+  // const [playClose] = useSound(close, { volume: 0.5 });
 
-  const closeSound = () => {
-    closeContact();
-    playClose();
-    setFooter("");
-  };
+  // const closeSound = () => {
+  //   closeContact();
+  //   playClose();
+  //   setFooter("");
+  // };
 
   return (
     <form action="POST" data-netlify="true">
