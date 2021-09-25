@@ -70,7 +70,7 @@ const Contact = () => {
                 // action="mailto:claudio.aime32@gmail.com"
                 // enctype="multipart/form-data"
                 name="contact"
-                method="POST"
+                action="POST"
                 data-netlify="true"
                 // action="/action_page.php"
                 // onSubmit={handleFormSubmit}
