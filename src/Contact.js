@@ -67,10 +67,11 @@ const Contact = () => {
             <section>
               <form
                 className="form"
-                action="mailto:claudio.aime32@gmail.com"
+                // action="mailto:claudio.aime32@gmail.com"
                 // enctype="multipart/form-data"
-                method="get"
-                name="contact_form"
+                name="contact"
+                method="POST"
+                data-netlify="true"
                 // action="/action_page.php"
                 // onSubmit={handleFormSubmit}
               >
