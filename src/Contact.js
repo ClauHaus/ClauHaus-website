@@ -65,52 +65,54 @@ const Contact = () => {
             </div>
             <div className="breaker"></div>
             <section>
-              <form
-                className="form"
-                // action="mailto:claudio.aime32@gmail.com"
-                // enctype="multipart/form-data"
-                name="contact"
-                method="POST"
-                data-netlify="true"
-                // action="/action_page.php"
-                // onSubmit={handleFormSubmit}
-              >
-                <label>
-                  <input
-                    className="form-items"
-                    type="text"
-                    name="name"
-                    // value={formInformation.fullName}
-                    // onChange={handleChange}
-                    // id="fullName"
-                    placeholder="Enter your name"
-                    required
-                  />
-                </label>
-                <label>
-                  <input
-                    className="form-items"
-                    type="email"
-                    name="email"
-                    // value={formInformation.email}
-                    // onChange={handleChange}
-                    // id="email"
-                    placeholder="Enter your email"
-                    required
-                  />
-                </label>
-                <textarea
-                  className="form-items"
-                  name="message"
-                  // value={formInformation.message}
-                  // onChange={handleChange}
-                  // id="message"
-                  rows="10"
-                  placeholder="Enter your message..."
-                  required
-                ></textarea>
-                <div data-netlify-recaptcha="true"></div>
-                <input type="submit" value="Send" className="form-btn"></input>
+              <form action="POST" data-netlify="true">
+                <div class="fields">
+                  <div class="field half">
+                    <input
+                      type="text"
+                      name="name"
+                      id="name"
+                      placeholder="Name"
+                    />
+                  </div>
+                  <div class="field half">
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      placeholder="Email"
+                    />
+                  </div>
+                  <div class="field">
+                    <textarea
+                      name="message"
+                      id="message"
+                      placeholder="Message"
+                      rows="7"
+                    ></textarea>
+                  </div>
+                  <div class="field">
+                    <input
+                      type="file"
+                      name="myfile"
+                      id="myfile"
+                      placeholder="Upload File"
+                      rows="7"
+                    ></input>
+                  </div>
+                  <div class="filed">
+                    <div data-netlify-recaptcha="true"></div>
+                  </div>
+                </div>
+                <ul class="actions">
+                  <li>
+                    <input
+                      type="submit"
+                      value="Send Message"
+                      class="button primary"
+                    />
+                  </li>
+                </ul>
               </form>
             </section>
           </>
