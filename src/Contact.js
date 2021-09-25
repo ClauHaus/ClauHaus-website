@@ -90,7 +90,7 @@ const Contact = () => {
                 <label htmlFor="email">
                   <input
                     className="form-items"
-                    type="text"
+                    type="email"
                     name="email"
                     // value={formInformation.email}
                     // onChange={handleChange}
@@ -109,6 +109,7 @@ const Contact = () => {
                   placeholder="Enter your message..."
                   required
                 ></textarea>
+                <div data-netlify-recaptcha="true"></div>
                 <input type="submit" value="Send" className="form-btn"></input>
               </form>
             </section>
@@ -129,10 +130,11 @@ const Contact = () => {
             <section>
               <form
                 className="form"
-                action="mailto:claudio.aime32@gmail.com"
+                // action="mailto:claudio.aime32@gmail.com"
                 // enctype="multipart/form-data"
-                method="get"
-                name="contact_form"
+                name="contact"
+                action="POST"
+                data-netlify="true"
                 // action="/action_page.php"
                 // onSubmit={handleFormSubmit}
               >
@@ -140,9 +142,9 @@ const Contact = () => {
                   <input
                     className="form-items"
                     type="text"
-                    name="fullName"
-                    value={formInformation.fullName}
-                    onChange={handleChange}
+                    name="name"
+                    // value={formInformation.fullName}
+                    // onChange={handleChange}
                     id="fullName"
                     placeholder="Introduce tu nombre"
                     required
@@ -151,10 +153,10 @@ const Contact = () => {
                 <label htmlFor="email">
                   <input
                     className="form-items"
-                    type="text"
+                    type="email"
                     name="email"
-                    value={formInformation.email}
-                    onChange={handleChange}
+                    // value={formInformation.email}
+                    // onChange={handleChange}
                     id="email"
                     placeholder="Introduce tu email"
                     required
@@ -163,8 +165,8 @@ const Contact = () => {
                 <textarea
                   className="form-items"
                   name="message"
-                  value={formInformation.message}
-                  onChange={handleChange}
+                  // value={formInformation.message}
+                  // onChange={handleChange}
                   id="message"
                   rows="10"
                   placeholder="Introduce tu mensaje..."
@@ -194,10 +196,11 @@ const Contact = () => {
             <section>
               <form
                 className="form"
-                action="mailto:claudio.aime32@gmail.com"
+                // action="mailto:claudio.aime32@gmail.com"
                 // enctype="multipart/form-data"
-                method="get"
-                name="contact_form"
+                name="contact"
+                action="POST"
+                data-netlify="true"
                 // action="/action_page.php"
                 // onSubmit={handleFormSubmit}
               >
@@ -205,7 +208,7 @@ const Contact = () => {
                   <input
                     className="form-items"
                     type="text"
-                    name="fullName"
+                    name="name"
                     // value={formInformation.fullName}
                     // onChange={handleChange}
                     id="fullName"
@@ -216,7 +219,7 @@ const Contact = () => {
                 <label htmlFor="email">
                   <input
                     className="form-items"
-                    type="text"
+                    type="email"
                     name="email"
                     // value={formInformation.email}
                     // onChange={handleChange}
@@ -230,7 +233,6 @@ const Contact = () => {
                   name="message"
                   // value={formInformation.message}
                   // onChange={handleChange}
-
                   id="message"
                   rows="10"
                   placeholder="Ihre Nachricht eingeben..."
