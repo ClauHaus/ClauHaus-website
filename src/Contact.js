@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useGlobalContext } from "./context";
 import { useSound, close, FontAwesomeIcon, faTimes } from "./index";
+import { NetlifyForm, Honeypot } from "react-netlify-forms";
 // import axios from "axios";
 
 // const API_PATH = "http://localhost:3000/clauhaus/api/index.php";
@@ -52,203 +53,41 @@ const Contact = () => {
   return (
     <>
       <section id="contact" className={`section-contact ${closingContact}`}>
-        {language === "english" && (
-          <>
-            <div className="header-about">
-              <h3 className="header-subtitle">Contact</h3>
-              <button
-                className="btn-close-left"
-                onClick={() => (sound ? closeSound() : closeContact())}
-              >
-                <FontAwesomeIcon icon={faTimes} />
-              </button>
-            </div>
-            <div className="breaker"></div>
-            <section>
-              <form
-                className="form"
-                // action="mailto:claudio.aime32@gmail.com"
-                // enctype="multipart/form-data"
-                action="POST"
-                data-netlify="true"
-                // action="/action_page.php"
-                // onSubmit={handleFormSubmit}
-              >
-                <label>
-                  <input
-                    className="form-items"
-                    type="text"
-                    name="name"
-                    // value={formInformation.fullName}
-                    // onChange={handleChange}
-                    id="name"
-                    placeholder="Enter your name"
-                    required
-                  />
-                </label>
-                <label>
-                  <input
-                    className="form-items"
-                    type="email"
-                    name="email"
-                    // value={formInformation.email}
-                    // onChange={handleChange}
-                    id="email"
-                    placeholder="Enter your email"
-                    required
-                  />
-                </label>
+        <NetlifyForm name="Contact" action="/thanks" honeypotName="bot-field">
+          {({ handleChange, success, error }) => (
+            <>
+              <Honeypot />
+              {success && <p>Thanks for contacting us!</p>}
+              {error && (
+                <p>
+                  Sorry, we could not reach our servers. Please try again later.
+                </p>
+              )}
+              <div>
+                <label htmlFor="name">Name:</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <label htmlFor="message">Message:</label>
                 <textarea
-                  className="form-items"
+                  type="text"
                   name="message"
-                  // value={formInformation.message}
-                  // onChange={handleChange}
                   id="message"
-                  rows="10"
-                  placeholder="Enter your message..."
-                  required
-                ></textarea>
-                <input
-                  type="submit"
-                  value="Enviar"
-                  className="form-btn"
-                ></input>
-              </form>
-            </section>
-          </>
-        )}
-        {language === "spanish" && (
-          <>
-            <div className="header-about">
-              <h3 className="header-subtitle">Contacto</h3>
-              <button
-                className="btn-close-left"
-                onClick={() => (sound ? closeSound() : closeContact())}
-              >
-                <FontAwesomeIcon icon={faTimes} />
-              </button>
-            </div>
-            <div className="breaker"></div>
-            <section>
-              <form
-                className="form"
-                // action="mailto:claudio.aime32@gmail.com"
-                // enctype="multipart/form-data"
-                name="contact"
-                action="POST"
-                data-netlify="true"
-                // action="/action_page.php"
-                // onSubmit={handleFormSubmit}
-              >
-                <label>
-                  <input
-                    className="form-items"
-                    type="text"
-                    name="name"
-                    // value={formInformation.fullName}
-                    // onChange={handleChange}
-                    // id="fullName"
-                    placeholder="Introduce tu nombre"
-                    required
-                  />
-                </label>
-                <label>
-                  <input
-                    className="form-items"
-                    type="email"
-                    name="email"
-                    // value={formInformation.email}
-                    // onChange={handleChange}
-                    // id="email"
-                    placeholder="Introduce tu email"
-                    required
-                  />
-                </label>
-                <textarea
-                  className="form-items"
-                  name="message"
-                  // value={formInformation.message}
-                  // onChange={handleChange}
-                  // id="message"
-                  rows="10"
-                  placeholder="Introduce tu mensaje..."
-                  required
-                ></textarea>
-                <input
-                  type="submit"
-                  value="Enviar"
-                  className="form-btn"
-                ></input>
-              </form>
-            </section>
-          </>
-        )}
-        {language === "german" && (
-          <>
-            <div className="header-about">
-              <h3 className="header-subtitle">Kontakt</h3>
-              <button
-                className="btn-close-left"
-                onClick={() => (sound ? closeSound() : closeContact())}
-              >
-                <FontAwesomeIcon icon={faTimes} />
-              </button>
-            </div>
-            <div className="breaker"></div>
-            <section>
-              <form
-                className="form"
-                // action="mailto:claudio.aime32@gmail.com"
-                // enctype="multipart/form-data"
-                name="contact"
-                action="POST"
-                data-netlify="true"
-                // action="/action_page.php"
-                // onSubmit={handleFormSubmit}
-              >
-                <label>
-                  <input
-                    className="form-items"
-                    type="text"
-                    name="name"
-                    // value={formInformation.fullName}
-                    // onChange={handleChange}
-                    id="fullName"
-                    placeholder="Ihren Namen eingeben"
-                    required
-                  />
-                </label>
-                <label htmlFor="email">
-                  <input
-                    className="form-items"
-                    type="email"
-                    name="email"
-                    // value={formInformation.email}
-                    // onChange={handleChange}
-                    // id="email"
-                    placeholder="Ihren Email eingeben"
-                    required
-                  />
-                </label>
-                <textarea
-                  className="form-items"
-                  name="message"
-                  // value={formInformation.message}
-                  // onChange={handleChange}
-                  // id="message"
-                  rows="10"
-                  placeholder="Ihre Nachricht eingeben..."
-                  required
-                ></textarea>
-                <input
-                  type="submit"
-                  value="Senden"
-                  className="form-btn"
-                ></input>
-              </form>
-            </section>
-          </>
-        )}
+                  rows="4"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <button type="submit">Submit</button>
+              </div>
+            </>
+          )}
+        </NetlifyForm>
       </section>
     </>
   );
