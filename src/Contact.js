@@ -77,7 +77,7 @@ const Contact = () => {
                 rows="7"
               ></input>
             </div>
-            <div class="filed">
+            <div class="field">
               <div data-netlify-recaptcha="true"></div>
             </div>
           </div>
