@@ -75,26 +75,26 @@ const Contact = () => {
                 // action="/action_page.php"
                 // onSubmit={handleFormSubmit}
               >
-                <label htmlFor="name">
+                <label>
                   <input
                     className="form-items"
                     type="text"
                     name="name"
                     // value={formInformation.fullName}
                     // onChange={handleChange}
-                    id="fullName"
+                    // id="fullName"
                     placeholder="Enter your name"
                     required
                   />
                 </label>
-                <label htmlFor="email">
+                <label>
                   <input
                     className="form-items"
                     type="email"
                     name="email"
                     // value={formInformation.email}
                     // onChange={handleChange}
-                    id="email"
+                    // id="email"
                     placeholder="Enter your email"
                     required
                   />
@@ -104,7 +104,7 @@ const Contact = () => {
                   name="message"
                   // value={formInformation.message}
                   // onChange={handleChange}
-                  id="message"
+                  // id="message"
                   rows="10"
                   placeholder="Enter your message..."
                   required
@@ -138,26 +138,26 @@ const Contact = () => {
                 // action="/action_page.php"
                 // onSubmit={handleFormSubmit}
               >
-                <label htmlFor="name">
+                <label>
                   <input
                     className="form-items"
                     type="text"
                     name="name"
                     // value={formInformation.fullName}
                     // onChange={handleChange}
-                    id="fullName"
+                    // id="fullName"
                     placeholder="Introduce tu nombre"
                     required
                   />
                 </label>
-                <label htmlFor="email">
+                <label>
                   <input
                     className="form-items"
                     type="email"
                     name="email"
                     // value={formInformation.email}
                     // onChange={handleChange}
-                    id="email"
+                    // id="email"
                     placeholder="Introduce tu email"
                     required
                   />
@@ -167,7 +167,7 @@ const Contact = () => {
                   name="message"
                   // value={formInformation.message}
                   // onChange={handleChange}
-                  id="message"
+                  // id="message"
                   rows="10"
                   placeholder="Introduce tu mensaje..."
                   required
@@ -204,7 +204,7 @@ const Contact = () => {
                 // action="/action_page.php"
                 // onSubmit={handleFormSubmit}
               >
-                <label htmlFor="name">
+                <label>
                   <input
                     className="form-items"
                     type="text"
@@ -223,7 +223,7 @@ const Contact = () => {
                     name="email"
                     // value={formInformation.email}
                     // onChange={handleChange}
-                    id="email"
+                    // id="email"
                     placeholder="Ihren Email eingeben"
                     required
                   />
@@ -233,7 +233,7 @@ const Contact = () => {
                   name="message"
                   // value={formInformation.message}
                   // onChange={handleChange}
-                  id="message"
+                  // id="message"
                   rows="10"
                   placeholder="Ihre Nachricht eingeben..."
                   required
