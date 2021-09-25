@@ -52,203 +52,45 @@ const Contact = () => {
   return (
     <>
       <section id="contact" className={`section-contact ${closingContact}`}>
-        {language === "english" && (
-          <>
-            <div className="header-about">
-              <h3 className="header-subtitle">Contact</h3>
-              <button
-                className="btn-close-left"
-                onClick={() => (sound ? closeSound() : closeContact())}
-              >
-                <FontAwesomeIcon icon={faTimes} />
-              </button>
+        <form action="POST" data-netlify="true">
+          <div class="fields">
+            <div class="field half">
+              <input type="text" name="name" id="name" placeholder="Name" />
             </div>
-            <div className="breaker"></div>
-            <section>
-              <form action="POST" data-netlify="true">
-                <div class="fields">
-                  <div class="field half">
-                    <input
-                      type="text"
-                      name="name"
-                      id="name"
-                      placeholder="Name"
-                    />
-                  </div>
-                  <div class="field half">
-                    <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      placeholder="Email"
-                    />
-                  </div>
-                  <div class="field">
-                    <textarea
-                      name="message"
-                      id="message"
-                      placeholder="Message"
-                      rows="7"
-                    ></textarea>
-                  </div>
-                  <div class="field">
-                    <input
-                      type="file"
-                      name="myfile"
-                      id="myfile"
-                      placeholder="Upload File"
-                      rows="7"
-                    ></input>
-                  </div>
-                  <div class="filed">
-                    <div data-netlify-recaptcha="true"></div>
-                  </div>
-                </div>
-                <ul class="actions">
-                  <li>
-                    <input
-                      type="submit"
-                      value="Send Message"
-                      class="button primary"
-                    />
-                  </li>
-                </ul>
-              </form>
-            </section>
-          </>
-        )}
-        {language === "spanish" && (
-          <>
-            <div className="header-about">
-              <h3 className="header-subtitle">Contacto</h3>
-              <button
-                className="btn-close-left"
-                onClick={() => (sound ? closeSound() : closeContact())}
-              >
-                <FontAwesomeIcon icon={faTimes} />
-              </button>
+            <div class="field half">
+              <input type="email" name="email" id="email" placeholder="Email" />
             </div>
-            <div className="breaker"></div>
-            <section>
-              <form
-                className="form"
-                // action="mailto:claudio.aime32@gmail.com"
-                // enctype="multipart/form-data"
-                name="contact"
-                action="POST"
-                data-netlify="true"
-                // action="/action_page.php"
-                // onSubmit={handleFormSubmit}
-              >
-                <label>
-                  <input
-                    className="form-items"
-                    type="text"
-                    name="name"
-                    // value={formInformation.fullName}
-                    // onChange={handleChange}
-                    // id="fullName"
-                    placeholder="Introduce tu nombre"
-                    required
-                  />
-                </label>
-                <label>
-                  <input
-                    className="form-items"
-                    type="email"
-                    name="email"
-                    // value={formInformation.email}
-                    // onChange={handleChange}
-                    // id="email"
-                    placeholder="Introduce tu email"
-                    required
-                  />
-                </label>
-                <textarea
-                  className="form-items"
-                  name="message"
-                  // value={formInformation.message}
-                  // onChange={handleChange}
-                  // id="message"
-                  rows="10"
-                  placeholder="Introduce tu mensaje..."
-                  required
-                ></textarea>
-                <input
-                  type="submit"
-                  value="Enviar"
-                  className="form-btn"
-                ></input>
-              </form>
-            </section>
-          </>
-        )}
-        {language === "german" && (
-          <>
-            <div className="header-about">
-              <h3 className="header-subtitle">Kontakt</h3>
-              <button
-                className="btn-close-left"
-                onClick={() => (sound ? closeSound() : closeContact())}
-              >
-                <FontAwesomeIcon icon={faTimes} />
-              </button>
+            <div class="field">
+              <textarea
+                name="message"
+                id="message"
+                placeholder="Message"
+                rows="7"
+              ></textarea>
             </div>
-            <div className="breaker"></div>
-            <section>
-              <form
-                className="form"
-                // action="mailto:claudio.aime32@gmail.com"
-                // enctype="multipart/form-data"
-                name="contact"
-                action="POST"
-                data-netlify="true"
-                // action="/action_page.php"
-                // onSubmit={handleFormSubmit}
-              >
-                <label>
-                  <input
-                    className="form-items"
-                    type="text"
-                    name="name"
-                    // value={formInformation.fullName}
-                    // onChange={handleChange}
-                    id="fullName"
-                    placeholder="Ihren Namen eingeben"
-                    required
-                  />
-                </label>
-                <label htmlFor="email">
-                  <input
-                    className="form-items"
-                    type="email"
-                    name="email"
-                    // value={formInformation.email}
-                    // onChange={handleChange}
-                    // id="email"
-                    placeholder="Ihren Email eingeben"
-                    required
-                  />
-                </label>
-                <textarea
-                  className="form-items"
-                  name="message"
-                  // value={formInformation.message}
-                  // onChange={handleChange}
-                  // id="message"
-                  rows="10"
-                  placeholder="Ihre Nachricht eingeben..."
-                  required
-                ></textarea>
-                <input
-                  type="submit"
-                  value="Senden"
-                  className="form-btn"
-                ></input>
-              </form>
-            </section>
-          </>
-        )}
+            <div class="field">
+              <input
+                type="file"
+                name="myfile"
+                id="myfile"
+                placeholder="Upload File"
+                rows="7"
+              ></input>
+            </div>
+            <div class="filed">
+              <div data-netlify-recaptcha="true"></div>
+            </div>
+          </div>
+          <ul class="actions">
+            <li>
+              <input
+                type="submit"
+                value="Send Message"
+                class="button primary"
+              />
+            </li>
+          </ul>
+        </form>
       </section>
     </>
   );
