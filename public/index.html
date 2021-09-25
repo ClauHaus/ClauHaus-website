@@ -20,17 +20,16 @@
     <title>ClauHaus</title>
   </head>
   <body>
-    <form className="form" // action="mailto:claudio.aime32@gmail.com" // enctype="multipart/form-data" name="contact"
-      action="POST" data-netlify="true" // action="/action_page.php" // onSubmit={handleFormSubmit}>
+    <form className="form" name="contact"
+      action="POST" data-netlify="true" >
       <label>
-        <input className="form-items" type="text" name="name" // value={formInformation.fullName} // onChange={handleChange}
-          // id="fullName" placeholder="Enter your name" required />
+        <input className="form-items" type="text" name="name"  id="Name" placeholder="Enter your name" required />
       </label>
       <label>
-        <input className="form-items" type="email" name="email" // value={formInformation.email} // onChange={handleChange}
+        <input className="form-items" type="email" name="email" 
           id="email" placeholder="Enter your email" required />
       </label>
-      <textarea className="form-items" name="message" // value={formInformation.message} // onChange={handleChange}
+      <textarea className="form-items" name="message" 
         id="message" rows="10" placeholder="Enter your message..." required></textarea>
       <input type="submit" value="Enviar" className="form-btn"></input>
     </form>
