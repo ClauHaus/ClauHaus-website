@@ -2,6 +2,7 @@ import askaway from "../images/askaway.png";
 import odyssey from "../images/odyssey.png";
 import memory from "../images/memory.png";
 import website from "../images/website.png";
+import clock from "../images/clock.png";
 
 export const dataProjectsEn = [
   {
@@ -35,6 +36,14 @@ export const dataProjectsEn = [
     text: "Project made in React. These website is meant to work as a resume, showing some of my information as well the projects that I already made. If you liked it you can get the code just clicking in the `repository`.",
     link: "https://clauhaus.netlify.app/",
     repository: "https://github.com/ClauHaus/ClauHaus",
+  },
+  {
+    id: 4,
+    image: `${clock}`,
+    title: "International Clock",
+    text: "These website shows the actual time in our location (UTC+-) and also the time in different cities in the world.I made it basically to see how to work with different time zones and without any external API.",
+    link: "https://international-clock.netlify.app/",
+    repository: "https://github.com/ClauHaus/International-Clock",
   },
 ];
 
@@ -71,6 +80,14 @@ export const dataProjectsSp = [
     link: "https://clauhaus.netlify.app/",
     repository: "https://github.com/ClauHaus/ClauHaus",
   },
+  {
+    id: 4,
+    image: `${clock}`,
+    title: "International Clock",
+    text: "Esta web muestra la hora actual en nuestra ubicación (UTC+-) y además en diferentes ciudades en el mundo. La realicé basicamente para ver como trabajar con zonas horarias y sin un API externo.",
+    link: "https://international-clock.netlify.app/",
+    repository: "https://github.com/ClauHaus/International-Clock",
+  },
 ];
 
 export const dataProjectsDe = [
@@ -105,5 +122,13 @@ export const dataProjectsDe = [
     text: "Projekt in React erstellt. Diese Website soll als Lebenslauf dienen und einige meiner Informationen sowie die Projekte zeigen, die ich bereits gemacht habe. Wenn es Ihnen gefallen hat, kannst du den Code mit einem Klick in das `Repository` erhalten.",
     link: "https://clauhaus.netlify.app/",
     repository: "https://github.com/ClauHaus/ClauHaus",
+  },
+  {
+    id: 4,
+    image: `${clock}`,
+    title: "International Clock",
+    text: "Diese Website zeigt die aktuelle Zeit an unserem Standort (UTC+-) und auch in verschiedenen Städten der Welt. Ich habe es hauptsächlich gemacht, um zu sehen, wie man mit Zeitzonen und ohne eine externe API arbeiten kann.",
+    link: "https://international-clock.netlify.app/",
+    repository: "https://github.com/ClauHaus/International-Clock",
   },
 ];
