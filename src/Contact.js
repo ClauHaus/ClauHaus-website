@@ -67,13 +67,8 @@ const Contact = () => {
             <section>
               <form
                 className="form"
-                // action="mailto:claudio.aime32@gmail.com"
-                // enctype="multipart/form-data"
-                name="contact"
-                action="POST"
-                data-netlify="true"
-                // action="/action_page.php"
-                // onSubmit={handleFormSubmit}
+                action="https://formspree.io/f/mqkwnreb"
+                method="POST"
               >
                 <label>
                   <input
@@ -91,7 +86,7 @@ const Contact = () => {
                   <input
                     className="form-items"
                     type="email"
-                    name="email"
+                    name="_replyto"
                     // value={formInformation.email}
                     // onChange={handleChange}
                     id="email"
@@ -109,11 +104,7 @@ const Contact = () => {
                   placeholder="Enter your message..."
                   required
                 ></textarea>
-                <input
-                  type="submit"
-                  value="Enviar"
-                  className="form-btn"
-                ></input>
+                <input type="submit" value="Send" className="form-btn"></input>
               </form>
             </section>
           </>
@@ -133,13 +124,8 @@ const Contact = () => {
             <section>
               <form
                 className="form"
-                // action="mailto:claudio.aime32@gmail.com"
-                // enctype="multipart/form-data"
-                name="contact"
-                action="POST"
-                data-netlify="true"
-                // action="/action_page.php"
-                // onSubmit={handleFormSubmit}
+                action="https://formspree.io/f/mqkwnreb"
+                method="POST"
               >
                 <label>
                   <input
@@ -157,7 +143,7 @@ const Contact = () => {
                   <input
                     className="form-items"
                     type="email"
-                    name="email"
+                    name="_replyto"
                     // value={formInformation.email}
                     // onChange={handleChange}
                     // id="email"
@@ -199,13 +185,8 @@ const Contact = () => {
             <section>
               <form
                 className="form"
-                // action="mailto:claudio.aime32@gmail.com"
-                // enctype="multipart/form-data"
-                name="contact"
-                action="POST"
-                data-netlify="true"
-                // action="/action_page.php"
-                // onSubmit={handleFormSubmit}
+                action="https://formspree.io/f/mqkwnreb"
+                method="POST"
               >
                 <label>
                   <input
@@ -223,7 +204,7 @@ const Contact = () => {
                   <input
                     className="form-items"
                     type="email"
-                    name="email"
+                    name="_replyto"
                     // value={formInformation.email}
                     // onChange={handleChange}
                     // id="email"
