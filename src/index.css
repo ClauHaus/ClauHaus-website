@@ -1351,6 +1351,8 @@ article.nextSlide {
   color: black;
   opacity: 0.8;
   border-bottom: none;
+  background: transparent;
+  box-shadow: unset;
 }
 
 .thunder-hide {
