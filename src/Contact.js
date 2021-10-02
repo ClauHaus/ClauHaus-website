@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useGlobalContext } from "./context";
 import { useSound, close, FontAwesomeIcon, faTimes } from "./index";
 // import axios from "axios";
@@ -9,19 +9,19 @@ const Contact = () => {
   const { language, closeContact, closingContact, sound, setFooter } =
     useGlobalContext();
 
-  const [formInformation, setFormInformation] = useState({
-    fullName: "",
-    email: "",
-    message: "",
-    mailSent: false,
-    error: null,
-  });
+  // const [formInformation, setFormInformation] = useState({
+  //   fullName: "",
+  //   email: "",
+  //   message: "",
+  //   mailSent: false,
+  //   error: null,
+  // });
 
-  const handleChange = (e) => {
-    const name = e.target.name;
-    const value = e.target.value;
-    setFormInformation({ ...formInformation, [name]: value });
-  };
+  // const handleChange = (e) => {
+  //   const name = e.target.name;
+  //   const value = e.target.value;
+  //   setFormInformation({ ...formInformation, [name]: value });
+  // };
 
   // const handleFormSubmit = (e) => {
   //   e.preventDefault();
